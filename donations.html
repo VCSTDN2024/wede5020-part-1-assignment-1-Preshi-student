@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donations</title>
+</head>
+<body>
+
+    <h1>Donations</h1>
+    <p>Make a meaningful contribution to support our cause.</p>
+
+    <form action="#">
+
+        <!--Put your custom amount here-->
+        <legend>Choose an amount</legend>
+
+        <!--The default amounts given go here-->
+        <input type="radio" id="once" name="donation_type"  value="once" >
+        <label for="once" >One-time</label><br>
+
+        <input type="radio" id="monthly" name="donation_type" value="monthly">
+        <label for="monthly">Monthly</label>
+
+        <input type="radio" id="quarterly" name="donation_type" value="quarterly">
+        <label for="quarterly">Quarterly</label>
+
+        <!--This is where the donor can input their name-->
+        <div>
+            <label for="donorName" ><Name></label>
+            <input type="text" id="donorName" name="name" placeholder="Your full name" >
+        </div>
+
+        <!--This where the message can be inputted-->
+        <div>
+            <label for="message"  name="message" rows="4" placeholder="Optional note..."></textarea>
+        </div>
+
+        <!--Options on where the donor can choose what exactly they want to give to support-->
+        <div>
+           <label for="purpose">Choose a purpose:</label>
+            <select id="purpose" name="purpose">
+            <option value="meals">Meals for children</option>
+            <option value="school">School supplies</option>
+            <option value="shelter">Shelter &amp; care</option>
+            <option value="health">Healthcare support</option>
+            <option value="activities">After-school activities</option>
+            <option value="general">General support</option>
+        </select>
+
+        <div>
+            <button type="submit" >Donate Now</button>
+        </div>
+
+        <p>Kindroot Haven is a non-profit organisation that provides support to children in need.</p>
+
+
+
+        </div>
+
+
+
+            </label>
+        </div>
+
+
+        
+        
+
+
+        
+       
+
+
+
+
+
+
+
+
+
+    </form>
+    
+</body>
+</html>
