@@ -44,6 +44,22 @@ We aim to partner with local schools, clinics, and NGOs to expand access to reso
 We plan to be able to monitor the progress through regular evaluations, child development tracking
 
 
+Key features and functionality 
+<img width="1375" height="701" alt="image" src="https://github.com/user-attachments/assets/d05787b9-24b6-4db7-8929-24b7354ac9e9" />
+
+•	Website traffic- This tracks how many people visit the website. 
+•	Donation Conversions – This measures how many visitors make a financial contribution on the website. 
+•	Volunteer signups – This counts how many users apply to volunteer through our website. 
+•	Newsletter subscriptions – This counts how many users sign up for the updates. 
+•	Time spent on site – This indicates how engaging the content is. 
+•	Social media shares – This often reflects how users share the website’s content externally. 
+•	Event Registrations - This tracks sign-ups for Kind Root Haven’s community events.  
+
+
+
+
+
+
 
 
 
