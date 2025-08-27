@@ -22,6 +22,32 @@ Our target market is to individuals who are willing to give back such as working
 Also, organisations that are involved in charity in order to support child welfare. 
 Our target market is also to community members who can donate small but have consistent support such as clothing, food, tutoring.   
 
+What are our goals and objectives for this project?
+
+Goals 
+<img width="300" height="202" alt="image" src="https://github.com/user-attachments/assets/4687df56-f1f3-4b06-8efb-b087b448ea1f" />
+
+One of our goals is to provide holistic care to the orphans such as nutrition, education, and emotional support. 
+To empower children to become confident, compassionate growing into empowering individuals. 
+We also aim to foster community involvement through volunteer programs, partnerships, and awareness campaigns. 
+We aim to promote long-term development by offering access to education, life skills, and mentorship. 
+We aim to ensure sustainability through transparent operations, and strategic growth. 
+
+Objectives 
+<img width="405" height="303" alt="image" src="https://github.com/user-attachments/assets/542d8cf6-9bcd-4c34-83ed-5bfe96156613" />
+
+We aim to publish a safe and nurturing residential fertility with trained caregivers and staff that aims to support these children. 
+To implement educational programs that include tutoring, school enrolment, and helping them to learn creative activities. 
+We aim to provide social and psychological support through counselling, group therapy, and wellness workshops. 
+We aim to launch community outreach initiatives to raise awareness and to reduce stigma around child vulnerability. 
+We aim to partner with local schools, clinics, and NGOs to expand access to resources and services. 
+We plan to be able to monitor the progress through regular evaluations, child development tracking
+
+
+
+
+
+
 
 
 
