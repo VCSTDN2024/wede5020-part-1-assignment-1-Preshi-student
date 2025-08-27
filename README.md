@@ -99,6 +99,12 @@ https://github.com/VCSTDN2024/wede5020-part-1-assignment-1-Preshi-student
 
 References
 
+“Redirect Notice.” Google.com, 2025, www.google.com/url?sa=i&url=https%3A%2F%2Fasana.com%2Fresources%2Fgoal-vs-objective&psig=AOvVaw0sYtuHAy1b52hnvN0almMw&ust=1753728390132000&source=images&cd=vfe&opi=89978449&ved=0CBgQjhxqFwoTCKCa4L_Z3Y4DFQAAAAAdAAAAABAE. Accessed 27 July 2025.
+“Redirect Notice.” Google.com, 2025, www.google.com/url?sa=i&url=https%3A%2F%2Fwww.finalsite.com%2Fblog%2Fp%2F~board%2Fb%2Fpost%2Fwhat-is-user-experience&psig=AOvVaw1bRthqnoft8Upv0WJHE8HI&ust=1753728464694000&source=images&cd=vfe&opi=89978449&ved=0CBgQjhxqFwoTCNj9q-TZ3Y4DFQAAAAAdAAAAABAE. Accessed 27 July 2025.
+“Redirect Notice.” Google.com, 2025, www.google.com/url?sa=i&url=https%3A%2F%2Fwww.actuatemedia.com%2Fb2b-seo-vs-b2c-seo-in-digital-marketing%2F&psig=AOvVaw1Ce9xsRhZivqpqmjwDc-E6&ust=1756362497627000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCMiA8K6uqo8DFQAAAAAdAAAAABAD. Accessed 27 Aug. 2025.
+
+W3Schools. “HTML Tutorial.” W3schools.com, 2024, www.w3schools.com/html/.
+
 
 
 
