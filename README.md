@@ -53,7 +53,65 @@ Key features and functionality
 •	Newsletter subscriptions – This counts how many users sign up for the updates. 
 •	Time spent on site – This indicates how engaging the content is. 
 •	Social media shares – This often reflects how users share the website’s content externally. 
-•	Event Registrations - This tracks sign-ups for Kind Root Haven’s community events.  
+•	Event Registrations - This tracks sign-ups for Kind Root Haven’s community events. 
+
+Timeline and Milestones
+
+•	The project will be completed in four weeks. 
+•	In the first week, we will focus on branding and the layout design. 
+•	In the second week, we will start building the homepage and the core pages. 
+•	In week 3, we will dedicate our time to adding content and refining the user experience. 
+•	Then in week 4 we will include the testing, feedback, and final adjustments. 
+
+Features and Functionality(How they ran in html)
+
+Homepage(html)
+<img width="1702" height="557" alt="image" src="https://github.com/user-attachments/assets/ce78074c-b81d-4300-8896-91acfb6397f2" />
+
+About Us(html)
+<img width="1581" height="997" alt="image" src="https://github.com/user-attachments/assets/50612db5-375b-4376-affa-f066887e9868" />
+
+<img width="1910" height="667" alt="image" src="https://github.com/user-attachments/assets/ecac4081-9fff-4d2b-a91b-a795d80636e4" />
+
+
+Contact Us(html)
+<img width="767" height="1037" alt="image" src="https://github.com/user-attachments/assets/6d82e42e-8b2e-42b6-883f-61102798389d" />
+
+
+Partners(html)
+<img width="952" height="1021" alt="image" src="https://github.com/user-attachments/assets/cef77e2e-9776-4781-be60-1bd4ebdf91fc" />
+
+
+Donations(html)
+<img width="752" height="370" alt="image" src="https://github.com/user-attachments/assets/3dbc0e86-9637-43cb-80af-325865a23b7a" />
+
+
+Testimonials(html)
+<img width="1156" height="991" alt="image" src="https://github.com/user-attachments/assets/a2dceebe-3215-4036-a82f-c4903aedd555" />
+
+
+Our sitemap for the project can be found here:
+<img width="1084" height="514" alt="image" src="https://github.com/user-attachments/assets/800a3767-1858-44dd-970b-7106602821c2" />
+
+
+Our github repository link can be found here:
+https://github.com/VCSTDN2024/wede5020-part-1-assignment-1-Preshi-student
+
+References
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
