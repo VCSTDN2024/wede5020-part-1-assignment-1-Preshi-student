@@ -3,45 +3,208 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Partner with Us</title>
+    <title>Partners & Sponsors</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            color: #fff;
+            line-height: 1.6;
+            background-color: #557b55; /* The dark green background color */
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding: 20px;
+            background-color: transparent;
+        }
+
+        .logo {
+            position: absolute;
+            left: 20px;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 40px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+        .nav-links li a:hover {
+            color: #b3d1b3;
+        }
+
+        /* Main content container */
+        .page-content {
+            padding: 40px 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        
+        h2 {
+            font-size: 2rem;
+            margin-top: 50px;
+            margin-bottom: 20px;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        
+        .tagline {
+            text-align: center;
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+        }
+        
+        .section-header {
+            text-align: left;
+        }
+
+        /* Flexbox for sections to handle layout */
+        .partners-section, .sponsor-section {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 20px;
+            margin-bottom: 50px;
+        }
+        
+        .partners-section .image-row {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .sponsor-section .content-row {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            width: 100%;
+        }
+
+        /* Ensures text and image columns are separate */
+        .text-column {
+            flex: 1;
+        }
+        
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        ul li {
+            margin-bottom: 15px;
+        }
+
+        .image-container img {
+            display: block;
+            border-radius: 8px;
+        }
+
+        /* Button styling */
+        .btn {
+            display: inline-block;
+            padding: 15px 40px;
+            text-decoration: none;
+            color: #fff;
+            background-color: #557b55;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #436443;
+        }
+
+        /* Responsive adjustments for smaller screens */
+        @media (max-width: 768px) {
+            .partners-section, .sponsor-section {
+                align-items: center;
+                text-align: center;
+            }
+            .sponsor-section .content-row {
+                flex-direction: column;
+            }
+            .partners-section .image-row {
+                flex-direction: column;
+            }
+        }
+    </style>
 </head>
 <body>
 
-    <h1>Partner with Us</h1>
-    <p>Together we can create safe and nurturing spaces for every child.</p>
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo">
+                <img src="Images/logo.png" width="48" height="48" alt="Kindroot Haven Logo"/>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+                <li><a href="partners.html">Partners & Sponsors</a></li>
+                <li><a href="testimonials.html">Testimonials</a></li>
+                <li><a href="donations.html">Donations</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <h2>Our Partners</h2>
+    <main class="page-content">
+        <h1>Partner with Us</h1>
+        <p class="tagline">Together we can create safe and nurturing spaces for every child.</p>
 
-<!--Images to display for you to become our partner in this role of supporting children-->
-   <img src="Images/joininghands.png" width="240"> 
+        <section class="partners-section">
+            <h2 class="section-header">Our Partners</h2>
+            <div class="image-row">
+                <img src="Images/joint.png" width="240" alt="Joining hands">
+                
+                <img src="Images/moments.png" width="240" alt="Happy moments">
+            </div>
+        </section>
 
-   <img src="Images/kiddieshands.png" width="240">
+        <section class="sponsor-section">
+            <h2 class="section-header">Become a Sponsor</h2>
+            <div class="content-row">
+                <div class="text-column">
+                    <p>Want to partner with us? We partner with organisations and individuals who share our vision.</p>
+                    <h3>Why partner with us?</h3>
+                    <ul>
+                        <li><p>Collaborate: Join us, in order to create projects that will have a big impact on supporting children.</p></li>
+                        <li><p>Support: Leave all the stress to us! We offer you with the resources and funding in order to sustain programs.</p></li>
+                        <li><p>Grow Together: By partnering with us you will build impactful relationships within the community.</p></li>
+                    </ul>
+                </div>
+                <div class="image-column">
+                    <img src="Images/partnership.png" width="400" alt="Handshake">
+                </div>
+            </div>
+            <p><a href="contactus.html" class="btn">Become our partner</a></p>
+            <p><a href="donations.html" class="btn">Donations</a></p>
+        </section>
 
-   <img src="Images/moments.png" width="240">
-
-   <h2>Become a Sponsor</h2>
-   <p>Want to partner with us? We partner with organisations and individuals who share our vision.</p>
-
-   <h3>Why patner with us?</h3>
-
-   <img src="Images/partnership.png" width="240">
-
-   <ul>
-    <li>Collaborate: Join us, in order to create projects that will have a big impact on supporting children.</li>
-    <li>Support: Leave all the stress to us! We offer you with the resources and funding in order to sustain programs.</li>
-    <li>Grow Together: By partnering with us you will build impactful relationships within the community.</li>
-
-   </ul>
-<!--If one decides to become a partner, links takes them to the contacts page-->
-   <p><a href="contactus.html">Become our partner</a></p>
-
-   <!--If one is interested into partnering with us or being our sponsor then they should click thsi link which takes them to 
-   the donations page -->
-
-   <li><a href="donations.html">Donations</a></li>
-
-
-
-
+    </main>
 </body>
-</html
+</html>

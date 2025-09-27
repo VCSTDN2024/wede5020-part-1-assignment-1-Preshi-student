@@ -4,40 +4,120 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kindroot Haven</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            color: #fff;
+            height: 100%;
+            overflow: hidden;
+            background-color: #557b55; /* Solid button color */
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .logo {
+            position: absolute;
+            left: 20px;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 40px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+        .nav-links li a:hover {
+            color: #b3d1b3;
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            height: 100vh;
+            padding: 0 20px;
+        }
+
+        .content h1 {
+            font-size: 4rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #f0f0f0;
+        }
+
+        .content p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            max-width: 600px;
+            margin-bottom: 40px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 40px;
+            text-decoration: none;
+            color: #fff;
+            background-color: #557b55;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #436443;
+        }
+
+        hr {
+            display: none;
+        }
+    </style>
 </head>
 <body>
 
     <header>
-        <nav>
-            <a href="index.html">
-                <!--This is our logo that goes here at the top by the corner-->
-            <img src="Images/logo.png" width="48" height="48" alt="Kindroot Haven Logo"/>
-
-           </a>
-           <ul>
-            <!--Here are all the links for all our pages. When you go on to our home page, you can then access any page directly 
-            by clicking on the links-->
-            <li><a href="index.html">Home</a></li>
-            <li><a href="aboutus.html">About Us</a></li>
-            <li><a href="contactus.html">Contact Us</a></li>
-            <li><a href="partners.html">Partners & Sponsors</a></li>
-            <li><a href="testimonials.html">Testimonials</a></li>
-            <li><a href="donations.html">Donations</a></li>
-           </ul>
+        <nav class="navbar">
+            <a href="index.html" class="logo">
+                <img src="Images/logo.png" width="48" height="48" alt="Kindroot Haven Logo"/>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+                <li><a href="partners.html">Partners & Sponsors</a></li>
+                <li><a href="testimonials.html">Testimonials</a></li>
+                <li><a href="donations.html">Donations</a></li>
+            </ul>
         </nav>
     </header>
 
+    <main class="content">
+        <h1>Kindroot Haven</h1>
+        <p>
+            Kindroot Haven targets all abandoned children who are homeless, abused and thrown away. 
+            We take them in and support them. Once they're in Kindroot Haven's hands, they are given a 
+            safe environment to grow in, and they have access to education and emotional support.
+        </p>
+        <hr>
+        <p><a href="#next" class="btn">Next</a></p>
+    </main>
 
-   <!--The "h1" is for the first title indicating to start the first paragraph -->
-    <h1>Kindroot Haven</h1>
-    <p>
-        Kindroot Haven targets all abandoned children who are homeless, abused and thrown away. 
-        We take them in and support them. Once they're in Kindroot Haven's hands, they are given a 
-        safe environment to grow in, and they have access to education and emotional support.
-    </p>
-    <hr>
-    <!--This is supposed to be the next button-->
-    <p><a href="#next">Next</a></p>
-    
 </body>
 </html>

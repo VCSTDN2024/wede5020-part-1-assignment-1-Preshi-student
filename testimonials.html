@@ -1,41 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Testimonials</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Testimonials</title>
+  <style>
+    /* Reset some defaults */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      font-family: Arial, sans-serif;
+      background-color: #557b55; /* same dark green you use elsewhere */ 
+      color: #f5f0e6; /* light/cream text to contrast */
+      line-height: 1.5;
+      padding: 40px 20px;
+    }
+
+    .testimonials-section {
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .testimonials-section h1 {
+      font-size: 2.8rem;
+      margin-bottom: 40px;
+    }
+
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 40px;
+    }
+
+    .testimonial-card {
+      background-color: rgba(255, 255, 255, 0.1); /* subtle overlay so cards stand out */
+      padding: 20px;
+      border-radius: 12px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .testimonial-card img {
+      width: 140px;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 20px;
+    }
+
+    .testimonial-card .name {
+      font-size: 1.4rem;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .testimonial-card .subtitle {
+      font-size: 1rem;
+      font-style: italic;
+      margin-bottom: 15px;
+    }
+
+    .testimonial-card .message {
+      font-size: 1.1rem;
+      text-align: center;
+    }
+
+    @media (max-width: 768px) {
+      body, html {
+        padding: 20px 10px;
+      }
+      .testimonial-card img {
+        width: 120px;
+        height: 120px;
+        margin-bottom: 15px;
+      }
+      .testimonial-card .name {
+        font-size: 1.2rem;
+      }
+      .testimonial-card .message {
+        font-size: 1rem;
+      }
+      .testimonial-grid {
+        gap: 20px;
+      }
+    }
+  </style>
 </head>
 <body>
-
-    <!--Testimonials of what people say about our organisation can be found here -->
-
+  <section class="testimonials-section">
     <h1>What people say</h1>
 
-    <img src="Images/girltesti.jpg" width="240">
-    <p><b>Jessica</b></p>
-    <p>
-        Being a support to Kindroot Haven has been a rewarding experience. Just my small contribution helps to bring comfort and hope to children.
-    </p>
+    <div class="testimonial-grid">
+      <div class="testimonial-card">
+        <img src="Images/girltesti.jpg" alt="Jessica">
+        <div class="name">Jessica</div>
+        <div class="subtitle">Parent</div>
+        <div class="message">
+          Being a support to Kindroot Haven has been a rewarding experience. Just my small contribution helps to bring comfort and hope to children.
+        </div>
+      </div>
 
-    <img src="Images/guy.png" width="240">
-    <p><b>Michael</b></p>
-    <p>
-        I'm inspired by the compassion shown at Kindroot Haven. 
-    </p>
+      <div class="testimonial-card">
+        <img src="Images/guy.png" alt="Michael">
+        <div class="name">Michael</div>
+        <div class="subtitle">Volunteer</div>
+        <div class="message">
+          I'm inspired by the compassion shown at Kindroot Haven.
+        </div>
+      </div>
 
-    <img src="Images/girl2.jpg" width="240">
-    <p><b>Sarah</b></p>
-    <p>
-        Kindroot Haven makes a real difference in our community.
-
-    </p>
-
-
-
-
-
-
-    "
-    
+      <div class="testimonial-card">
+        <img src="Images/girl2.jpg" alt="Sarah">
+        <div class="name">Sarah</div>
+        <div class="subtitle">Community Member</div>
+        <div class="message">
+          Kindroot Haven makes a real difference in our community.
+        </div>
+      </div>
+    </div>
+  </section>
 </body>
 </html>
