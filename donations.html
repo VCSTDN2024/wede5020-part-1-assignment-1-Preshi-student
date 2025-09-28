@@ -5,17 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Donations</title>
 
-  <!-- Link to your existing site-wide CSS -->
+  <!-- Link to your existing site-wide CSS if needed -->
   <link rel="stylesheet" href="style.css">
 
-  <!-- Additional donation-specific CSS -->
   <style>
     body {
       background: #f8f5f0; /* Soft golden-brown */
       font-family: Arial, sans-serif;
       display: flex;
-      justify-content: center;
-      align-items: flex-start;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
       min-height: 100vh;
       margin: 0;
       padding: 20px;
@@ -72,7 +72,7 @@
       margin-right: 5px;
     }
 
-    button {
+    .donate-button {
       width: 100%;
       background: #c99748;
       color: #fff;
@@ -84,7 +84,7 @@
       transition: background 0.3s;
     }
 
-    button:hover {
+    .donate-button:hover {
       background: #a67833;
     }
 
@@ -94,6 +94,47 @@
       font-size: 14px;
       color: #555;
     }
+
+    .nav-buttons {
+      display: flex;
+      justify-content: space-between;
+      max-width: 500px;
+      width: 100%;
+      margin-top: 20px;
+      padding: 0 20px;
+    }
+
+    .nav-buttons button {
+      background-color: #438a43; /* green background */
+      color: #fff;
+      border: none;
+      padding: 12px 28px;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.1s;
+      /* Important: make sure it's type="button" so it doesn't behave like submit */
+      type: button;
+    }
+
+    .nav-buttons button:hover {
+      background-color: #356b35;
+    }
+
+    .nav-buttons button:active {
+      transform: scale(0.98);
+    }
+
+    @media (max-width: 768px) {
+      .nav-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+      .nav-buttons button {
+        width: 90%;
+        margin-bottom: 10px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -102,14 +143,9 @@
     <h1>Donations</h1>
     <p>Make a meaningful contribution to support our cause.</p>
 
-    <!-- PayPal required -->
     <input type="hidden" name="business" value="your-paypal-email@example.com">
-    <!-- OR use hosted button ID if preferred:
-    <input type="hidden" name="hosted_button_id" value="YOUR_HOSTED_BUTTON_ID">
-    -->
     <input type="hidden" name="currency_code" value="ZAR">
 
-    <!-- Donation Type -->
     <legend>Choose donation type</legend>
     <div class="radio-group">
       <input type="radio" id="once" name="donation_type" value="One-time" checked>
@@ -122,15 +158,12 @@
       <label for="quarterly">Quarterly</label>
     </div>
 
-    <!-- Donor Name -->
     <label for="donorName">Name:</label>
     <input type="text" id="donorName" name="custom" placeholder="Your full name">
 
-    <!-- Optional Message -->
     <label for="message">Message:</label>
     <textarea id="message" name="item_name" rows="4" placeholder="Optional note..."></textarea>
 
-    <!-- Purpose Selection -->
     <label for="purpose">Choose a purpose:</label>
     <select id="purpose" name="item_number">
       <option value="meals">Meals for children</option>
@@ -141,11 +174,15 @@
       <option value="general">General support</option>
     </select>
 
-    <!-- Donate Button -->
-    <button type="submit">Donate Now</button>
+    <button type="submit" class="donate-button">Donate Now</button>
 
     <p class="footer-text">Kindroot Haven is a non-profit organisation that provides support to children in need.</p>
   </form>
+
+  <div class="nav-buttons">
+    <button type="button" onclick="window.location.href='partners.html'">← Back to Partners</button>
+    <button type="button" onclick="window.location.href='testimonials.html'">Next → Testimonials</button>
+  </div>
 
 </body>
 </html>

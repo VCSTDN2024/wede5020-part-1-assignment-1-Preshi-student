@@ -18,12 +18,16 @@
       color: #f5f0e6; /* light/cream text to contrast */
       line-height: 1.5;
       padding: 40px 20px;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
     }
 
     .testimonials-section {
       max-width: 1200px;
       margin: 0 auto;
       text-align: center;
+      flex: 1; /* take available vertical space so button goes to bottom */
     }
 
     .testimonials-section h1 {
@@ -69,6 +73,28 @@
     .testimonial-card .message {
       font-size: 1.1rem;
       text-align: center;
+    }
+
+    /* Back button container & styling */
+    .back-button-container {
+      text-align: center;
+      margin-top: 20px;
+    }
+    .back-button-container button {
+      background-color: #f5f0e6;
+      color: #557b55;
+      border: none;
+      padding: 12px 24px;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.1s;
+    }
+    .back-button-container button:hover {
+      background-color: #e6e1d9;
+    }
+    .back-button-container button:active {
+      transform: scale(0.98);
     }
 
     @media (max-width: 768px) {
@@ -125,5 +151,10 @@
       </div>
     </div>
   </section>
+
+  <div class="back-button-container">
+    <button onclick="window.location.href='donations.html'">← Back to Donations</button>
+  </div>
+
 </body>
 </html>

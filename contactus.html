@@ -1,207 +1,240 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us</title>
-    <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-            color: #4b4b4b; /* Dark text color */
-            line-height: 1.6;
-            background-color: #d1e2c9; /* Light green background from mockup */
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      color: #4b4b4b;
+      line-height: 1.6;
+      background-color: #d1e2c9;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
 
-        /* Navbar (Assuming you want to keep the same style from your other pages) */
-        .navbar {
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
-            padding: 20px;
-            background-color: transparent;
-        }
+    /* Navbar styling */
+    .navbar {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      padding: 20px;
+      background-color: transparent;
+    }
+    .logo {
+      position: absolute;
+      left: 20px;
+    }
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 40px;
+      margin: 0;
+      padding: 0;
+    }
+    .nav-links li a {
+      text-decoration: none;
+      color: #4b4b4b;
+      font-size: 18px;
+      transition: color 0.3s;
+    }
+    .nav-links li a:hover {
+      color: #557b55;
+    }
 
-        .logo {
-            position: absolute;
-            left: 20px;
-        }
+    main {
+      padding: 40px 20px;
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+      flex: 1;
+    }
 
-        .nav-links {
-            list-style: none;
-            display: flex;
-            gap: 40px;
-            margin: 0;
-            padding: 0;
-        }
+    h1 {
+      font-size: 2.5rem;
+      color: #4b4b4b;
+      font-family: serif;
+    }
+    .tagline {
+      font-size: 1.2rem;
+      color: #4b4b4b;
+      margin-bottom: 50px;
+      font-family: serif;
+    }
 
-        .nav-links li a {
-            text-decoration: none;
-            color: #4b4b4b;
-            font-size: 18px;
-            transition: color 0.3s;
-        }
+    .contact-container {
+      display: flex;
+      justify-content: space-around;
+      align-items: flex-start;
+      gap: 40px;
+      background-color: #8c977c;
+      padding: 40px;
+      border-radius: 15px;
+      flex-wrap: wrap;
+    }
 
-        .nav-links li a:hover {
-            color: #557b55;
-        }
+    .form-section, .info-section {
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+      flex: 1;
+      min-width: 250px;
+    }
 
-        /* Main Content and Layout */
-        main {
-            padding: 40px 20px;
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: center;
-        }
+    .form-section h2, .info-section h2 {
+      font-size: 1.3rem;
+      color: #3a3a3a;
+      margin-bottom: 10px;
+      font-family: serif;
+    }
 
-        h1 {
-            font-size: 2.5rem;
-            color: #4b4b4b; /* Dark text color */
-            font-family: serif; /* To match the mockup's font style */
-        }
+    .form-section input, .form-section textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      background-color: #f0f0f0;
+      font-size: 1rem;
+    }
 
-        .tagline {
-            font-size: 1.2rem;
-            color: #4b4b4b;
-            margin-bottom: 50px;
-            font-family: serif;
-        }
+    .form-section button {
+      padding: 12px 30px;
+      background-color: #557b55;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      display: block;
+      margin-top: 10px;
+    }
+    .form-section button:hover {
+      background-color: #436443;
+    }
 
-        .contact-container {
-            display: flex;
-            justify-content: space-around;
-            align-items: flex-start;
-            gap: 40px;
-            background-color: #8c977c; /* Muted background color from mockup */
-            padding: 40px;
-            border-radius: 15px;
-        }
+    .info-section p {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 20px;
+      font-size: 1rem;
+      color: #4b4b4b;
+    }
+    .info-section .icon {
+      font-size: 1.5rem;
+    }
 
-        .form-section, .info-section {
-            display: flex;
-            flex-direction: column;
-            text-align: left;
-            flex: 1;
-        }
+    iframe {
+      display: block;
+      margin: 50px auto 0;
+      border-radius: 8px;
+      max-width: 100%;
+    }
 
-        .form-section label, .info-section h2 {
-            font-size: 1.3rem;
-            color: #3a3a3a;
-            margin-bottom: 10px;
-            font-family: serif;
-        }
+    /* Buttons for navigation (Back & Next) */
+    .nav-buttons {
+      display: flex;
+      justify-content: space-between;
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 0 20px;
+    }
+    .nav-buttons button {
+      background-color: #557b55; /* green background */
+      color: #fff;
+      border: none;
+      padding: 12px 28px;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.1s;
+    }
+    .nav-buttons button:hover {
+      background-color: #436443;
+    }
+    .nav-buttons button:active {
+      transform: scale(0.98);
+    }
 
-        .form-section input, .form-section textarea {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 20px;
-            border-radius: 8px;
-            border: 1px solid #ccc;
-            background-color: #f0f0f0; /* Light input background */
-            font-size: 1rem;
-        }
-
-        .form-section button {
-            padding: 12px 30px;
-            background-color: #557b55; /* Button color */
-            color: #fff;
-            border: none;
-            border-radius: 8px;
-            font-size: 1rem;
-            cursor: pointer;
-            transition: background-color 0.3s;
-            display: block;
-            margin-top: 10px;
-        }
-
-        .form-section button:hover {
-            background-color: #436443;
-        }
-
-        .info-section h2 {
-            text-align: left;
-        }
-
-        .info-section p {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            margin-bottom: 20px;
-            font-size: 1rem;
-            color: #4b4b4b;
-        }
-
-        .info-section .icon {
-            font-size: 1.5rem;
-        }
-
-        iframe {
-            display: block;
-            margin: 50px auto 0;
-            border-radius: 8px;
-        }
-
-        /* Responsive design for smaller screens */
-        @media (max-width: 768px) {
-            .contact-container {
-                flex-direction: column;
-            }
-        }
-    </style>
+    @media (max-width: 768px) {
+      .contact-container {
+        flex-direction: column;
+      }
+      .nav-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+      .nav-buttons button {
+        width: 90%;
+        margin-bottom: 10px;
+      }
+    }
+  </style>
 </head>
 <body>
 
-    <header>
-        <nav class="navbar">
-            <a href="index.html" class="logo">
-                <img src="Images/logo.png" width="48" height="48" alt="Kindroot Haven Logo"/>
-            </a>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="aboutus.html">About Us</a></li>
-                <li><a href="contactus.html">Contact Us</a></li>
-                <li><a href="partners.html">Partners & Sponsors</a></li>
-                <li><a href="testimonials.html">Testimonials</a></li>
-                <li><a href="donations.html">Donations</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header>
+    <nav class="navbar">
+      <a href="index.html" class="logo">
+        <img src="Images/logo.png" width="48" height="48" alt="Kindroot Haven Logo"/>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="contactus.html">Contact Us</a></li>
+        <li><a href="partners.html">Partners & Sponsors</a></li>
+        <li><a href="testimonials.html">Testimonials</a></li>
+        <li><a href="donations.html">Donations</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <main>
-        <h1>Contact Us</h1>
-        <p class="tagline">We'd love to hear from you!</p>
+  <main>
+    <h1>Contact Us</h1>
+    <p class="tagline">We'd love to hear from you!</p>
 
-        <div class="contact-container">
-            <div class="form-section">
-                <h2>Name</h2>
-                <form>
-                    <input type="text" id="name" name="name" placeholder="Name">
-                    <h2>Email</h2>
-                    <input type="email" id="email" name="email" placeholder="Email">
-                    <h2>Message</h2>
-                    <textarea id="message" name="message" rows="5" placeholder="Message"></textarea>
-                    <button type="submit">Send</button>
-                </form>
-            </div>
-            <div class="info-section">
-                <h2>Contact Information</h2>
-                <p><span class="icon">📞</span> 066 543 2416</p>
-                <p><span class="icon">✉️</span> successpreshi@gmail.com</p>
-                <p><span class="icon">✉️</span> prcsmbabazi@gmail.com</p>
-                <p><span class="icon">📍</span> 22 NuaNedsI Crescent, Winchester Hills</p>
-            </div>
-        </div>
+    <div class="contact-container">
+      <div class="form-section">
+        <h2>Name</h2>
+        <form>
+          <input type="text" id="name" name="name" placeholder="Name">
+          <h2>Email</h2>
+          <input type="email" id="email" name="email" placeholder="Email">
+          <h2>Message</h2>
+          <textarea id="message" name="message" rows="5" placeholder="Message"></textarea>
+          <button type="submit">Send</button>
+        </form>
+      </div>
+      <div class="info-section">
+        <h2>Contact Information</h2>
+        <p><span class="icon">📞</span> 066 543 2416</p>
+        <p><span class="icon">✉️</span> successpreshi@gmail.com</p>
+        <p><span class="icon">✉️</span> prcsmbabazi@gmail.com</p>
+        <p><span class="icon">📍</span> 22 NuaNedsI Crescent, Winchester Hills</p>
+      </div>
+    </div>
 
-        <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3582.759993942085!2d28.000000!3d-26.250000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e95a3e5c0!2s22%20NuaNedsi%20Crescent%2C%20Winchester%20Hills!5e0!3m2!1sen!2sza!4v1692960000000"
-            width="600"
-            height="400"
-            style="border:0;"
-            allowfullscreen=""
-            loading="lazy">
-        </iframe>
-    </main>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3582.759993942085!2d28.000000!3d-26.250000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e95a3e5c0!2s22%20NuaNedsi%20Crescent%2C%20Winchester%20Hills!5e0!3m2!1sen!2sza!4v1692960000000"
+      width="600"
+      height="400"
+      style="border:0;"
+      allowfullscreen=""
+      loading="lazy">
+    </iframe>
+  </main>
+
+  <div class="nav-buttons">
+    <button onclick="window.location.href='aboutus.html'">← Back to About Us</button>
+    <button onclick="window.location.href='partners.html'">Next → Partners & Sponsors</button>
+  </div>
 
 </body>
 </html>
+
