@@ -1,188 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Donations</title>
-
-  <!-- Link to your site-wide CSS if you have one -->
-  <link rel="stylesheet" href="style.css">
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Partners & Sponsors</title>
   <style>
-    body {
-      background: #f8f5f0; /* Soft golden-brown */
-      font-family: Arial, sans-serif;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: center;
-      min-height: 100vh;
+    /* Reset and base styles */
+    * {
       margin: 0;
-      padding: 20px;
-    }
-
-    form {
-      background: #fff;
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      max-width: 500px;
-      width: 100%;
-    }
-
-    h1 {
-      text-align: center;
-      color: #5a3e1b;
-      margin-bottom: 10px;
-    }
-
-    p {
-      text-align: center;
-      color: #333;
-      margin-bottom: 20px;
-    }
-
-    label {
-      display: block;
-      margin-top: 10px;
-      margin-bottom: 4px;
-      font-weight: bold;
-      color: #333;
-    }
-
-    input[type="text"], textarea, select {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 15px;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      font-size: 14px;
+      padding: 0;
       box-sizing: border-box;
     }
 
-    textarea {
-      resize: vertical;
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #eaf7ea;
+      color: #333;
+      line-height: 1.6;
+      padding: 0 1rem;
     }
 
-    .radio-group {
-      margin-bottom: 15px;
+    header {
+      background-color: #4caf50;
+      padding: 1rem 0;
     }
 
-    .radio-group input[type="radio"] {
-      margin-right: 5px;
-    }
-
-    .donate-button {
-      width: 100%;
-      background: #c99748;
-      color: #fff;
-      padding: 12px;
-      font-size: 16px;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-
-    .donate-button:hover {
-      background: #a67833;
-    }
-
-    .footer-text {
-      text-align: center;
-      margin-top: 20px;
-      font-size: 14px;
-      color: #555;
-    }
-
-    /* Buttons navigation container (Back + Next) */
-    .nav-buttons {
+    .navbar {
       display: flex;
-      justify-content: space-between;  /* separates buttons: one to far left, one to far right */
-      max-width: 500px;
-      width: 100%;
-      margin-top: 20px;
-      padding: 0 20px;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      flex-wrap: wrap;
     }
 
-    .nav-buttons button {
-      background-color: #438a43; /* green background */
-      color: #fff;
-      border: none;
-      padding: 12px 28px;
-      font-size: 16px;
+    .logo img {
+      vertical-align: middle;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .nav-links li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links li a:hover {
+      color: #d4f0d4;
+    }
+
+    main.content {
+      max-width: 900px;
+      margin: 2rem auto;
+      text-align: center;
+    }
+
+    main img {
+      max-width: 100%;
+      height: auto;
+      margin: 1rem 0;
       border-radius: 8px;
+    }
+
+    h1, h2 {
+      color: #2e7d32;
+      margin-bottom: 1rem;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      margin: 0.5rem 0;
+      font-weight: 500;
+    }
+
+    .button-group {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .nav-button {
+      background-color: #4caf50;
+      color: white;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      border-radius: 5px;
       cursor: pointer;
-      transition: background-color 0.3s, transform 0.1s;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
     }
 
-    .nav-buttons button:hover {
-      background-color: #356b35; /* a darker green on hover */
+    .nav-button:hover {
+      background-color: #388e3c;
     }
 
-    .nav-buttons button:active {
-      transform: scale(0.98);
-    }
-
-    @media (max-width: 768px) {
-      .nav-buttons {
+    @media (max-width: 600px) {
+      .nav-links {
         flex-direction: column;
         align-items: center;
       }
-      .nav-buttons button {
-        width: 90%;
-        margin-bottom: 10px;
+
+      .button-group {
+        flex-direction: column;
       }
     }
   </style>
 </head>
 <body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <a href="index.html">
+          <img src="Images/logo.png" width="48" height="48" alt="Kindroot Haven Logo" />
+        </a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html" target="_blank">Home</a></li>
+        <li><a href="aboutus.html" target="_blank">About Us</a></li>
+        <li><a href="contactus.html" target="_blank">Contact Us</a></li>
+        <li><a href="partners.html" target="_blank">Partners & Sponsors</a></li>
+        <li><a href="testimonials.html" target="_blank">Testimonials</a></li>
+        <li><a href="donations.html" target="_blank">Donations</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <form action="https://www.paypal.com/donate" method="post" target="_blank">
-    <h1>Donations</h1>
-    <p>Make a meaningful contribution to support our cause.</p>
+  <main class="content">
+    <h1>Partner with Us</h1>
+    <img src="Images/moments.png" alt="Smiling partners with teddy bear" />
+    <p>Together we create a safe and nurturing space for every child.</p>
 
-    <!-- PayPal required -->
-    <input type="hidden" name="business" value="your-paypal-email@example.com">
-    <input type="hidden" name="currency_code" value="ZAR">
+    <h2>Become a Sponsor</h2>
+    <img src="Images/joint.png" alt="Handshake symbolizing collaboration" />
+    <p>Want to partner with us? We collaborate with individuals and organisations who share our vision.</p>
 
-    <legend>Choose donation type</legend>
-    <div class="radio-group">
-      <input type="radio" id="once" name="donation_type" value="One-time" checked>
-      <label for="once">One-time</label>
+    <ul>
+      <li><strong>Collaborate:</strong> Join us to create projects that uplift and protect children.</li>
+      <li><strong>Support:</strong> Leave the logistics to us—we provide resources and funding to sustain programs.</li>
+      <li><strong>Grow Together:</strong> Build meaningful relationships and lasting impact within the community.</li>
+    </ul>
 
-      <input type="radio" id="monthly" name="donation_type" value="Monthly">
-      <label for="monthly">Monthly</label>
-
-      <input type="radio" id="quarterly" name="donation_type" value="Quarterly">
-      <label for "quarterly">Quarterly</label>
+    <div class="button-group">
+      <a href="contactus.html" class="nav-button">← Back</a>
+      <a href="donations.html" class="nav-button">Next →</a>
     </div>
-
-    <label for="donorName">Name:</label>
-    <input type="text" id="donorName" name="custom" placeholder="Your full name">
-
-    <label for="message">Message:</label>
-    <textarea id="message" name="item_name" rows="4" placeholder="Optional note..."></textarea>
-
-    <label for="purpose">Choose a purpose:</label>
-    <select id="purpose" name="item_number">
-      <option value="meals">Meals for children</option>
-      <option value="school">School supplies</option>
-      <option value="shelter">Shelter &amp; care</option>
-      <option value="health">Healthcare support</option>
-      <option value="activities">After-school activities</option>
-      <option value="general">General support</option>
-    </select>
-
-    <button type="submit" class="donate-button">Donate Now</button>
-
-    <p class="footer-text">Kindroot Haven is a non-profit organisation that provides support to children in need.</p>
-  </form>
-
-  <div class="nav-buttons">
-    <button onclick="window.location.href='partners.html'">← Back to Partners</button>
-    <button onclick="window.location.href='testimonials.html'">Next → Testimonials</button>
-  </div>
-
+  </main>
 </body>
 </html>
