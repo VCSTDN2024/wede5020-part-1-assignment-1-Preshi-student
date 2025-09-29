@@ -4,10 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Us</title>
+
+  <!-- This is the CSS link that connects all the web pages -->
+  <link rel="stylesheet" href="style.css">
+
   <style>
-    /* Base settings */
+    /* These are the base settings */
     html {
-      font-size: 16px; /* baseline for rem units */
+      font-size: 16px; /* baseline for rem units is placed here */
     }
     body, html {
       margin: 0;
@@ -17,22 +21,23 @@
       line-height: 1.6;
       height: 100%;
       overflow: auto;
-      background-color: #557b55;
+      background-color: #557b55;  
     }
 
-    /* Navbar */
+    /* The navigation bar goes here */
     .navbar {
       display: flex;
       justify-content: flex-end;
       align-items: center;
-      padding: 1.25rem 1rem; /* use rem for padding */
+      padding: 1.25rem 1rem; /* Rem is used for padding here */
       background-color: transparent;
     }
-    .logo {
+    .logo {           /* The style for the logo goes here */
       position: absolute;
       left: 1.25rem;
     }
-    .nav-links {
+    /* The navigation links go here */
+    .nav-links {         
       list-style: none;
       display: flex;
       gap: 2.5rem;
@@ -49,7 +54,7 @@
       color: #b3d1b3;
     }
 
-    /* Page content layout */
+    /* The page content layout comes here */
     .page-content {
       padding: 2.5rem 1rem;
       max-width: 1000px;
@@ -88,17 +93,17 @@
       height: auto;
     }
 
-    /* Buttons container for Back + Next */
+    /* This is the button container for the buttons */
     .nav-buttons {
       display: flex;
       justify-content: space-between;
       max-width: 1000px;
-      margin: 1.5rem auto; /* spacing above buttons */
+      margin: 1.5rem auto;
       padding: 0 1rem;
     }
 
     .nav-buttons button {
-      background-color: #438a43; /* a green shade */
+      background-color: #438a43; /* This is the background colour for the buttons */
       color: #fff;
       border: none;
       padding: 0.75rem 1.5rem;
@@ -108,10 +113,10 @@
       transition: background-color 0.3s;
     }
     .nav-buttons button:hover {
-      background-color: #356b35; /* darker green when hovering */
+      background-color: #356b35;
     }
 
-    /* Responsive adjustments */
+    /* I have made some resposive adjustments here so my web pages are responsive */
     @media (max-width: 768px) {
       .section-container,
       .section-container.reverse {
@@ -126,7 +131,7 @@
         max-width: 300px;
       }
       .nav-buttons button {
-        width: 45%; /* two buttons side by side but narrower on small screens */
+        width: 45%; /
         min-width: 120px;
       }
     }
@@ -151,17 +156,22 @@
         margin-bottom: 0.5rem;
       }
     }
-
   </style>
 </head>
 <body>
 
   <header>
+    <!--This is the header at the very top where the navigation bar is located-->
     <nav class="navbar">
+      <!--Under the navigation class here the navigation bar is placed-->
       <a href="index.html" class="logo">
+        <!--This is the logo link-->
+
         <img src="Images/logo.png" width="48" height="48" alt="Kindroot Haven Logo"/>
+        <!--This is the logoi image which is situated at the top left corner of the web page-->
       </a>
       <ul class="nav-links">
+        <!--Here are the navigation links that are situated at the top of the navigation bar-->
         <li><a href="index.html">Home</a></li>
         <li><a href="aboutus.html">About Us</a></li>
         <li><a href="contactus.html">Contact Us</a></li>
@@ -173,6 +183,7 @@
   </header>
 
   <main class="page-content">
+    <!--The main content goes here-->
     <h1>About Us</h1>
 
     <div class="section-container">
@@ -187,12 +198,14 @@
     <h2>Vision</h2>
     <div class="section-container reverse">
       <div class="text-content">
+        <!--Here is the container for the text -->
         <p>
           Our vision as Kindroot Haven is to nurture resilient, and compassionate children to grow into empowered adults that then get ready 
           to shape their communities with kindness, courage, and purpose. 
         </p>
       </div>
       <div class="image-container">
+        <!--Here is the container for the image-->
         <img src="Images/vision.png" alt="Vision">
       </div>
     </div>
@@ -204,8 +217,8 @@
       community. 
     </p>
 
-    <!-- Buttons: Back & Next -->
     <div class="nav-buttons">
+      <!--Here is the container for the back and next buttons -->
       <button onclick="window.location.href='index.html'">← Back to Home</button>
       <button onclick="window.location.href='contactus.html'">Next → Contact Us</button>
     </div>

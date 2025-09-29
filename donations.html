@@ -5,12 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Donations</title>
 
-  <!-- Link to your existing site-wide CSS if needed -->
+  <!-- This is the CSS link needed to link all the pages -->
   <link rel="stylesheet" href="style.css">
 
   <style>
     body {
-      background: #f8f5f0; /* Soft golden-brown */
+      background: #f8f5f0; /* The soft golden-brown background colour is used here  */
       font-family: Arial, sans-serif;
       display: flex;
       flex-direction: column;
@@ -21,7 +21,7 @@
       padding: 20px;
     }
 
-    form {
+    form {     /* The form design is displayed here */
       background: #fff;
       padding: 30px;
       border-radius: 12px;
@@ -29,17 +29,17 @@
       max-width: 500px;
       width: 100%;
     }
-
+    /* The design for the first heading goes here */
     h1 {
       text-align: center;
       color: #5a3e1b;
       margin-bottom: 10px;
     }
-
+     /* The design for the main paragraph goes here */
     p {
-      text-align: center;
+      text-align: center;    /* The text is aligned towards the center here */
       color: #333;
-      margin-bottom: 20px;
+      margin-bottom: 20px;     /* A space of 20px at the margin bottom is placed here for better readability */
     }
 
     label {
@@ -105,7 +105,7 @@
     }
 
     .nav-buttons button {
-      background-color: #438a43; /* green background */
+      background-color: #438a43; /* background colour of the buttons */
       color: #fff;
       border: none;
       padding: 12px 28px;
@@ -113,7 +113,7 @@
       border-radius: 8px;
       cursor: pointer;
       transition: background-color 0.3s, transform 0.1s;
-      /* Important: make sure it's type="button" so it doesn't behave like submit */
+     
       type: button;
     }
 
@@ -138,8 +138,8 @@
   </style>
 </head>
 <body>
-
-  <form action="https://www.paypal.com/donate" method="post" target="_blank">
+   <!--The form is displayed here-->
+  <form action="https://www.paypal.com/donate" method="post" target="_blank">   <!--The option to donate via paypal is displayed here-->
     <h1>Donations</h1>
     <p>Make a meaningful contribution to support our cause.</p>
 
@@ -166,6 +166,7 @@
 
     <label for="purpose">Choose a purpose:</label>
     <select id="purpose" name="item_number">
+        <!--Different options of which kind of purpose the user can choose on a way to help out-->
       <option value="meals">Meals for children</option>
       <option value="school">School supplies</option>
       <option value="shelter">Shelter &amp; care</option>
@@ -173,9 +174,9 @@
       <option value="activities">After-school activities</option>
       <option value="general">General support</option>
     </select>
-
+    <!--The button where the user can donate is found here-->
     <button type="submit" class="donate-button">Donate Now</button>
-
+    <!--Here is the text found at the footer-->
     <p class="footer-text">Kindroot Haven is a non-profit organisation that provides support to children in need.</p>
   </form>
 

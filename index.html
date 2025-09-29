@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kindroot Haven</title>
+    <!--This is the CSS link that connects all the pages-->
+    <link rel="stylesheet" href="style.css">
     <style>
         body, html {
             margin: 0;
@@ -11,23 +13,23 @@
             font-family: Arial, sans-serif;
             color: #fff;
             height: 100%;
-            overflow: hidden;
-            background-color: #557b55; /* Solid button color */
+            overflow: auto; /* Scrolling is enabled here on multiple devices */
+            background-color: #557b55;
         }
 
         .navbar {
             display: flex;
             justify-content: flex-end;
-            align-items: center;
-            padding: 20px;
+            align-items: center;   /* All the navigation links are aligned on top at the center */
+            padding: 20px;    /* The items have been placed at a spacing of 20px, this is so that the user has better readbility */
         }
 
         .logo {
-            position: absolute;
+            position: absolute;   /* This position is more relative and not limited*/
             left: 20px;
         }
 
-        .nav-links {
+        .nav-links {            /* These are the navigation links placed on top at the navigation bar */
             list-style: none;
             display: flex;
             gap: 40px;
@@ -46,7 +48,7 @@
             color: #b3d1b3;
         }
 
-        .content {
+        .content {         /* The main content goes here */
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -56,21 +58,21 @@
             padding: 0 20px;
         }
 
-        .content h1 {
+        .content h1 {     /* The first heading goes here */
             font-size: 4rem;
             font-weight: bold;
-            margin-bottom: 20px;
+            margin-bottom: 20px;    
             color: #f0f0f0;
         }
 
-        .content p {
+        .content p {        /* The main paragraph goes here */
             font-size: 1.2rem;
             line-height: 1.6;
             max-width: 600px;
             margin-bottom: 40px;
         }
 
-        .btn {
+        .btn {                /* This is the button takes you to the next page */
             display: inline-block;
             padding: 15px 40px;
             text-decoration: none;
@@ -82,7 +84,7 @@
         }
 
         .btn:hover {
-            background-color: #436443;
+            background-color: #436443;    /* This is the button's background colour */
         }
 
         hr {
@@ -91,13 +93,17 @@
     </style>
 </head>
 <body>
-
     <header>
+        <!--This is the very top where the navigation bar is located-->
         <nav class="navbar">
+            <!--The navigation bar is put into a specific class-->
             <a href="index.html" class="logo">
+                <!--This is the link for the logo-->
                 <img src="Images/logo.png" width="48" height="48" alt="Kindroot Haven Logo"/>
+                <!--This is the logo image which I have decreased its size so it can be appropriate for logo sizes. It is placed at the top left corner of the web page.-->
             </a>
             <ul class="nav-links">
+                <!--Below are the navigation links that are placed on the navigation bar on top-->
                 <li><a href="index.html">Home</a></li>
                 <li><a href="aboutus.html">About Us</a></li>
                 <li><a href="contactus.html">Contact Us</a></li>
@@ -107,8 +113,8 @@
             </ul>
         </nav>
     </header>
-
     <main class="content">
+        <!--The main content goes here -->
         <h1>Kindroot Haven</h1>
         <p>
             Kindroot Haven targets all abandoned children who are homeless, abused and thrown away. 
@@ -116,8 +122,7 @@
             safe environment to grow in, and they have access to education and emotional support.
         </p>
         <hr>
-        <p><a href="#next" class="btn">Next</a></p>
+        <p><a href="aboutus.html" class="btn">Next</a></p>
     </main>
-
 </body>
 </html>

@@ -4,7 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact Us</title>
+
+  <!-- This the CSS link that connects all the pages -->
+  <link rel="stylesheet" href="style.css">
+
   <style>
+    /* Here is the style for the body */
     body, html {
       margin: 0;
       padding: 0;
@@ -17,7 +22,7 @@
       min-height: 100vh;
     }
 
-    /* Navbar styling */
+    /* Here is the styling for the navigation bar */
     .navbar {
       display: flex;
       justify-content: flex-end;
@@ -25,6 +30,7 @@
       padding: 20px;
       background-color: transparent;
     }
+    /* Here is the styling for the logo */
     .logo {
       position: absolute;
       left: 20px;
@@ -66,7 +72,7 @@
       font-family: serif;
     }
 
-    .contact-container {
+    .contact-container {    /* The styling for the main contact container goes here */
       display: flex;
       justify-content: space-around;
       align-items: flex-start;
@@ -77,10 +83,10 @@
       flex-wrap: wrap;
     }
 
-    .form-section, .info-section {
+    .form-section, .info-section {    /* The styling for the form section and information section go here */
       display: flex;
       flex-direction: column;
-      text-align: left;
+      text-align: left;     /* The text is aligned to the left side here */
       flex: 1;
       min-width: 250px;
     }
@@ -131,22 +137,22 @@
     }
 
     iframe {
-      display: block;
+      display: block;    /* The styling for the blocks to fill in the information is displayed here */
       margin: 50px auto 0;
       border-radius: 8px;
       max-width: 100%;
     }
 
-    /* Buttons for navigation (Back & Next) */
+    /* Buttons for navigation for the back and next */
     .nav-buttons {
       display: flex;
-      justify-content: space-between;
+      justify-content: space-between;     /* Separates the buttons whereby the back button is at the left and the next button is at the right */
       max-width: 800px;
       margin: 20px auto;
       padding: 0 20px;
     }
     .nav-buttons button {
-      background-color: #557b55; /* green background */
+      background-color: #557b55; /* The background colour of the buttons is displayed here */
       color: #fff;
       border: none;
       padding: 12px 28px;
@@ -180,9 +186,12 @@
 <body>
 
   <header>
+    <!--This is the header is where the navigation bar goes right at the top of the web page-->
     <nav class="navbar">
+        <!---The class for the navigation bar is placed here-->
       <a href="index.html" class="logo">
         <img src="Images/logo.png" width="48" height="48" alt="Kindroot Haven Logo"/>
+        <!--Here the logo image goes at the top left corner.-->
       </a>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
@@ -197,12 +206,15 @@
 
   <main>
     <h1>Contact Us</h1>
+    <!--The first heading goes here-->
     <p class="tagline">We'd love to hear from you!</p>
 
     <div class="contact-container">
       <div class="form-section">
         <h2>Name</h2>
+        <!--Second heading goes here-->
         <form>
+            <!--The form is displayed here-->
           <input type="text" id="name" name="name" placeholder="Name">
           <h2>Email</h2>
           <input type="email" id="email" name="email" placeholder="Email">
@@ -212,6 +224,7 @@
         </form>
       </div>
       <div class="info-section">
+        <!--The container for the information section is displayed here-->
         <h2>Contact Information</h2>
         <p><span class="icon">📞</span> 066 543 2416</p>
         <p><span class="icon">✉️</span> successpreshi@gmail.com</p>
@@ -220,8 +233,12 @@
       </div>
     </div>
 
+    <!--Below the link for the map location is displayed-->
+
     <iframe
+    
       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3582.759993942085!2d28.000000!3d-26.250000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e95a3e5c0!2s22%20NuaNedsi%20Crescent%2C%20Winchester%20Hills!5e0!3m2!1sen!2sza!4v1692960000000"
+    
       width="600"
       height="400"
       style="border:0;"

@@ -4,6 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Testimonials</title>
+
+   <!--This is the  link to your existing  CSS file to connect all the pages -->
+  <link rel="stylesheet" href="style.css">
+
   <style>
     /* Reset some defaults */
     * {
@@ -14,8 +18,8 @@
 
     body, html {
       font-family: Arial, sans-serif;
-      background-color: #557b55; /* same dark green you use elsewhere */ 
-      color: #f5f0e6; /* light/cream text to contrast */
+      background-color: #557b55; /* same dark green is used here */ 
+      color: #f5f0e6; /* light/cream text used to contrast */
       line-height: 1.5;
       padding: 40px 20px;
       display: flex;
@@ -42,14 +46,14 @@
     }
 
     .testimonial-card {
-      background-color: rgba(255, 255, 255, 0.1); /* subtle overlay so cards stand out */
+      background-color: rgba(255, 255, 255, 0.1); /* subtle overlay to make the card to stand out */
       padding: 20px;
       border-radius: 12px;
       display: flex;
       flex-direction: column;
       align-items: center;
     }
-
+     /* The testimonial card image is diaplayed here */
     .testimonial-card img {
       width: 140px;
       height: 140px;
@@ -57,25 +61,25 @@
       border-radius: 12px;
       margin-bottom: 20px;
     }
-
+     /* The name of the partcipant who is giving the testimoonial is displayed here */
     .testimonial-card .name {
       font-size: 1.4rem;
       font-weight: bold;
       margin-bottom: 5px;
     }
-
+     /* The testimonial-card  subtitle is displayed here */
     .testimonial-card .subtitle {
       font-size: 1rem;
       font-style: italic;
       margin-bottom: 15px;
     }
-
+     /* The testimonial card message is displayed here */
     .testimonial-card .message {
       font-size: 1.1rem;
       text-align: center;
     }
 
-    /* Back button container & styling */
+    /* Here is the back-button container */
     .back-button-container {
       text-align: center;
       margin-top: 20px;
