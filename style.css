@@ -1,74 +1,121 @@
-/* style.css */
-
-/* This code enables for  page scrolling */
-html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    overflow-y: auto;       /* allows for vertical scrolling */
-    overflow-x: hidden;     /* Will hide horizontal scroll if there is any overflow */
+/* ------------------- RESET & BASE STYLES ------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
 
 body {
-    background-color: #2F4F2F; /* This is the background colour */
-    background-image: linear-gradient(rgba(47,79,47,0.9), rgba(47,79,47,0.9));
-    color: #F5F5DC; /* light beige is used here for better readability */
-    font-family: 'Arial', sans-serif;
-    /* margin/padding have already been handled here that's why the coding specifically for them are not stated here.*/
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #eaf7ea;
+  color: #333;
+  line-height: 1.6;
+  padding: 0 1rem;
 }
 
-/* The navigation bar is situated here */
-nav {
-    display: flex;
-    justify-content: flex-start;
-    gap: 20px;
-    padding: 20px;
+ul {
+  list-style: none;
+  padding: 0;
 }
 
-nav a {
-    text-decoration: none;
-    color: #0B3D0B; /* Here are the links placed in dark green */
-    font-weight: bold;
+li {
+  margin: 0.5rem 0;
+  font-weight: 500;
 }
 
-nav a:hover {
-    color: #A9DFBF; /* lighter green hover */
+h1, h2 {
+  color: #2e7d32;
+  margin-bottom: 1rem;
 }
 
-/* Styling for the first heading goes here */
-h1 {
-    font-size: 3em;
-    margin-bottom: 0.5em;
+/* ------------------- HEADER & NAVBAR ------------------- */
+header {
+  background-color: #4caf50;
+  padding: 1rem 0;
 }
 
-/* The styling for the main paragraph goes here */
-p {
-    font-size: 1.2em;
-    line-height: 1.6;
-    max-width: 700px;
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
 }
 
-
-button, .btn {
-    background-color: #6B8E23; /* Background colour for the buttons */
-    color: #F5F5DC;
-    padding: 10px 20px;     /* Space between the two buttons for most of the web pages. Like the next button and backbutton */
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
+.logo img {
+  vertical-align: middle;
 }
 
-button:hover, .btn:hover {
-    background-color: #556B2F; /* darker green on hover */
+.nav-links {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
-/* In this corner the text is centered vertically and horizontally */
-.container {
-    display: flex;
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #d4f0d4;
+}
+
+/* ------------------- MAIN CONTENT ------------------- */
+main.content {
+  max-width: 900px;
+  margin: 2rem auto;
+  text-align: center;
+}
+
+main.content p {
+  margin: 1rem 0 1.5rem 0;
+}
+
+main.content img {
+  max-width: 100%;
+  height: auto;
+  margin: 1rem 0;
+  border-radius: 8px;
+}
+
+/* ------------------- BUTTONS ------------------- */
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.nav-button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.nav-button:hover {
+  background-color: #388e3c;
+}
+
+/* ------------------- RESPONSIVE ------------------- */
+@media (max-width: 600px) {
+  .nav-links {
     flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-     
-    padding: 50px;
+    align-items: center;
+  }
+
+  .button-group {
+    flex-direction: column;
+  }
 }

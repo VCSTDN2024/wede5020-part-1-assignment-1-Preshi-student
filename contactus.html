@@ -1,257 +1,332 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact Us</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Contact Kindroot Haven | Get in Touch & Visit Us</title>
 
-  <!-- This the CSS link that connects all the pages -->
-  <link rel="stylesheet" href="style.css">
+    <meta name="description" content="Contact Kindroot Haven today! Reach out via phone (066 543 2416) or email, or find our location at 22 NuaNedsI Crescent, Winchester Hills. We'd love to hear from you." />
+    
+    <meta property="og:title" content="Get in Touch with Kindroot Haven" />
+    <meta property="og:description" content="Reach the Kindroot Haven team for donations, volunteering, or inquiries. Find our address and contact information here." />
+    <meta property="og:image" content="[FULL_URL_TO_YOUR_LOGO/logo.png]" /> 
+    <meta property="og:url" content="[FULL_URL_TO_YOUR_CONTACT_US_PAGE]" />
+    <meta property="og:type" content="website" />
 
-  <style>
-    /* Here is the style for the body */
-    body, html {
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-      color: #4b4b4b;
-      line-height: 1.6;
-      background-color: #d1e2c9;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-    }
+    <link rel="stylesheet" href="style.css">
 
-    /* Here is the styling for the navigation bar */
-    .navbar {
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-      padding: 20px;
-      background-color: transparent;
-    }
-    /* Here is the styling for the logo */
-    .logo {
-      position: absolute;
-      left: 20px;
-    }
-    .nav-links {
-      list-style: none;
-      display: flex;
-      gap: 40px;
-      margin: 0;
-      padding: 0;
-    }
-    .nav-links li a {
-      text-decoration: none;
-      color: #4b4b4b;
-      font-size: 18px;
-      transition: color 0.3s;
-    }
-    .nav-links li a:hover {
-      color: #557b55;
-    }
+    <style>
+        /* Here is the style for the body */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            color: #4b4b4b;
+            line-height: 1.6;
+            background-color: #d1e2c9;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
 
-    main {
-      padding: 40px 20px;
-      max-width: 800px;
-      margin: 0 auto;
-      text-align: center;
-      flex: 1;
-    }
+        /* Here is the styling for the navigation bar */
+        .navbar {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding: 20px;
+            background-color: transparent;
+        }
+        /* Here is the styling for the logo */
+        .logo {
+            position: absolute;
+            left: 20px;
+        }
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 40px;
+            margin: 0;
+            padding: 0;
+        }
+        .nav-links li a {
+            text-decoration: none;
+            color: #fff;         /* changed to white */
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+        .nav-links li a:hover {
+            color: #557b55;
+        }
 
-    h1 {
-      font-size: 2.5rem;
-      color: #4b4b4b;
-      font-family: serif;
-    }
-    .tagline {
-      font-size: 1.2rem;
-      color: #4b4b4b;
-      margin-bottom: 50px;
-      font-family: serif;
-    }
+        main {
+            padding: 40px 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            flex: 1;
+        }
 
-    .contact-container {    /* The styling for the main contact container goes here */
-      display: flex;
-      justify-content: space-around;
-      align-items: flex-start;
-      gap: 40px;
-      background-color: #8c977c;
-      padding: 40px;
-      border-radius: 15px;
-      flex-wrap: wrap;
-    }
+        h1 {
+            font-size: 2.5rem;
+            color: #4b4b4b;
+            font-family: serif;
+        }
+        .tagline {
+            font-size: 1.2rem;
+            color: #4b4b4b;
+            margin-bottom: 50px;
+            font-family: serif;
+        }
 
-    .form-section, .info-section {    /* The styling for the form section and information section go here */
-      display: flex;
-      flex-direction: column;
-      text-align: left;     /* The text is aligned to the left side here */
-      flex: 1;
-      min-width: 250px;
-    }
+        .contact-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+            gap: 40px;
+            background-color: #8c977c;
+            padding: 40px;
+            border-radius: 15px;
+            flex-wrap: wrap;
+        }
 
-    .form-section h2, .info-section h2 {
-      font-size: 1.3rem;
-      color: #3a3a3a;
-      margin-bottom: 10px;
-      font-family: serif;
-    }
+        .form-section, .info-section {
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+            flex: 1;
+            min-width: 250px;
+        }
 
-    .form-section input, .form-section textarea {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 20px;
-      border-radius: 8px;
-      border: 1px solid #ccc;
-      background-color: #f0f0f0;
-      font-size: 1rem;
-    }
+        .form-section h2, .info-section h2 {
+            font-size: 1.3rem;
+            color: #3a3a3a;
+            margin-bottom: 10px;
+            font-family: serif;
+        }
 
-    .form-section button {
-      padding: 12px 30px;
-      background-color: #557b55;
-      color: #fff;
-      border: none;
-      border-radius: 8px;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: background-color 0.3s;
-      display: block;
-      margin-top: 10px;
-    }
-    .form-section button:hover {
-      background-color: #436443;
-    }
+        .form-section input, .form-section textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            background-color: #f0f0f0;
+            font-size: 1rem;
+        }
 
-    .info-section p {
-      display: flex;
-      align-items: center;
-      gap: 15px;
-      margin-bottom: 20px;
-      font-size: 1rem;
-      color: #4b4b4b;
-    }
-    .info-section .icon {
-      font-size: 1.5rem;
-    }
+        .form-section button {
+            padding: 12px 30px;
+            background-color: #557b55;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            display: block;
+            margin-top: 10px;
+        }
+        .form-section button:hover {
+            background-color: #436443;
+        }
 
-    iframe {
-      display: block;    /* The styling for the blocks to fill in the information is displayed here */
-      margin: 50px auto 0;
-      border-radius: 8px;
-      max-width: 100%;
-    }
+        .info-section p {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+            font-size: 1rem;
+            color: #4b4b4b;
+        }
+        .info-section .icon {
+            font-size: 1.5rem;
+        }
 
-    /* Buttons for navigation for the back and next */
-    .nav-buttons {
-      display: flex;
-      justify-content: space-between;     /* Separates the buttons whereby the back button is at the left and the next button is at the right */
-      max-width: 800px;
-      margin: 20px auto;
-      padding: 0 20px;
-    }
-    .nav-buttons button {
-      background-color: #557b55; /* The background colour of the buttons is displayed here */
-      color: #fff;
-      border: none;
-      padding: 12px 28px;
-      font-size: 16px;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: background-color 0.3s, transform 0.1s;
-    }
-    .nav-buttons button:hover {
-      background-color: #436443;
-    }
-    .nav-buttons button:active {
-      transform: scale(0.98);
-    }
+        iframe {
+            display: block;
+            margin: 50px auto 0;
+            border-radius: 8px;
+            max-width: 100%;
+        }
 
-    @media (max-width: 768px) {
-      .contact-container {
-        flex-direction: column;
-      }
-      .nav-buttons {
-        flex-direction: column;
-        align-items: center;
-      }
-      .nav-buttons button {
-        width: 90%;
-        margin-bottom: 10px;
-      }
-    }
-  </style>
+        /* Buttons for navigation for the back and next */
+        .nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+        .nav-buttons button {
+            background-color: #557b55;
+            color: #fff;
+            border: none;
+            padding: 12px 28px;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.1s;
+        }
+        .nav-buttons button:hover {
+            background-color: #436443;
+        }
+        .nav-buttons button:active {
+            transform: scale(0.98);
+        }
+
+        @media (max-width: 768px) {
+            .contact-container {
+                flex-direction: column;
+            }
+            .nav-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            .nav-buttons button {
+                width: 90%;
+                margin-bottom: 10px;
+            }
+        }
+
+        /* ==== Toast styles ==== */
+        #toast-container {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 9999;
+        }
+        .toast {
+            background-color: #4caf50;  /* green for success */
+            color: white;
+            padding: 12px 20px;
+            border-radius: 4px;
+            margin-top: 10px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+        .toast.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        /* ==== End Toast styles ==== */
+
+    </style>
 </head>
 <body>
 
-  <header>
-    <!--This is the header is where the navigation bar goes right at the top of the web page-->
-    <nav class="navbar">
-        <!---The class for the navigation bar is placed here-->
-      <a href="index.html" class="logo">
-        <img src="Images/logo.png" width="48" height="48" alt="Kindroot Haven Logo"/>
-        <!--Here the logo image goes at the top left corner.-->
-      </a>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="aboutus.html">About Us</a></li>
-        <li><a href="contactus.html">Contact Us</a></li>
-        <li><a href="partners.html">Partners & Sponsors</a></li>
-        <li><a href="testimonials.html">Testimonials</a></li>
-        <li><a href="donations.html">Donations</a></li>
-      </ul>
-    </nav>
-  </header>
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo">
+                <img src="Images/logo.png" width="48" height="48" alt="Kindroot Haven Logo"/>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+                <li><a href="partners.html">Partners & Sponsors</a></li>
+                <li><a href="testimonials.html">Testimonials</a></li>
+                <li><a href="donations.html">Donations</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <main>
-    <h1>Contact Us</h1>
-    <!--The first heading goes here-->
-    <p class="tagline">We'd love to hear from you!</p>
+    <main>
+        <h1>Contact Us</h1>
+        <p class="tagline">We’d love to hear from you!</p>
 
-    <div class="contact-container">
-      <div class="form-section">
-        <h2>Name</h2>
-        <!--Second heading goes here-->
-        <form>
-            <!--The form is displayed here-->
-          <input type="text" id="name" name="name" placeholder="Name">
-          <h2>Email</h2>
-          <input type="email" id="email" name="email" placeholder="Email">
-          <h2>Message</h2>
-          <textarea id="message" name="message" rows="5" placeholder="Message"></textarea>
-          <button type="submit">Send</button>
-        </form>
-      </div>
-      <div class="info-section">
-        <!--The container for the information section is displayed here-->
-        <h2>Contact Information</h2>
-        <p><span class="icon">📞</span> 066 543 2416</p>
-        <p><span class="icon">✉️</span> successpreshi@gmail.com</p>
-        <p><span class="icon">✉️</span> prcsmbabazi@gmail.com</p>
-        <p><span class="icon">📍</span> 22 NuaNedsI Crescent, Winchester Hills</p>
-      </div>
+        <div class="contact-container">
+            <div class="form-section">
+                <h2>Name</h2>
+                <form id="contact-form">
+                    <input type="text" id="name" name="name" placeholder="Name">
+                    <h2>Email</h2>
+                    <input type="email" id="email" name="email" placeholder="Email">
+                    <h2>Message</h2>
+                    <textarea id="message" name="message" rows="5" placeholder="Message"></textarea>
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+            <div class="info-section">
+                <h2>Contact Information</h2>
+                <p><span class="icon">📞</span> 066 543 2416</p>
+                <p><span class="icon">✉️</span> successpreshi@gmail.com</p>
+                <p><span class="icon">✉️</span> prcsmbabazi@gmail.com</p>
+                <p><span class="icon">📍</span> 22 NuaNedsI Crescent, Winchester Hills</p>
+            </div>
+        </div>
+
+        <iframe
+            src="[PASTE YOUR GOOGLE MAPS EMBED URL HERE]"
+            width="600"
+            height="400"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy">
+        </iframe>
+    </main>
+
+    <div class="nav-buttons">
+        <button onclick="window.location.href='aboutus.html'">← Back to About Us</button>
+        <button onclick="window.location.href='partners.html'">Next → Partners & Sponsors</button>
     </div>
 
-    <!--Below the link for the map location is displayed-->
+    <div id="toast-container"></div>
 
-    <iframe
+    <script>
+        const footerHTML = `
+            <footer class="site-footer">
+                <p>© 2025 Kindroot Haven. All Rights Reserved.</p>
+            </footer>
+        `;
+        document.body.insertAdjacentHTML('beforeend', footerHTML);
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('contact-form');
+            const toastContainer = document.getElementById('toast-container');
+
+            function showToast(message, duration = 3000) {
+                const toast = document.createElement('div');
+                toast.className = 'toast';
+                toast.innerText = message;
+                toastContainer.appendChild(toast);
+
+                // trigger show animation
+                setTimeout(() => {
+                    toast.classList.add('show');
+                }, 10);
+
+                // remove after duration
+                setTimeout(() => {
+                    toast.classList.remove('show');
+                    // wait for animation then remove
+                    setTimeout(() => {
+                        toastContainer.removeChild(toast);
+                    }, 300);
+                }, duration);
+            }
+
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d114763.85011542277!2d28.011704192355328!3d-25.988684010965855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e9571fd4965198b%3A0x87b2105c1c8bfe22!2sMidrand!5e0!3m2!1sen!2sza!4v1762198042760!5m2!1sen!2sza"
+            width="600" 
+            height="450" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+
+
+            form.addEventListener('submit', function(event) {
+                event.preventDefault(); // prevent page refresh
+                // You could add validation or send form data here
+                showToast('Thank you for your message!');
+                form.reset(); // clear form fields
+            });
+        });
+    </script>
+
     
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3582.759993942085!2d28.000000!3d-26.250000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e95a3e5c0!2s22%20NuaNedsi%20Crescent%2C%20Winchester%20Hills!5e0!3m2!1sen!2sza!4v1692960000000"
-    
-      width="600"
-      height="400"
-      style="border:0;"
-      allowfullscreen=""
-      loading="lazy">
-    </iframe>
-  </main>
-
-  <div class="nav-buttons">
-    <button onclick="window.location.href='aboutus.html'">← Back to About Us</button>
-    <button onclick="window.location.href='partners.html'">Next → Partners & Sponsors</button>
-  </div>
-
 </body>
 </html>
-

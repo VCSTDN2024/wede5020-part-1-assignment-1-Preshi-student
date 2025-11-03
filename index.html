@@ -1,128 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kindroot Haven</title>
-    <!--This is the CSS link that connects all the pages-->
-    <link rel="stylesheet" href="style.css">
-    <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-            color: #fff;
-            height: 100%;
-            overflow: auto; /* Scrolling is enabled here on multiple devices */
-            background-color: #557b55;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kindroot Haven | Safe Home for Abandoned Children</title>
+  
+  <meta name="description" content="Kindroot Haven provides a safe haven, education, and emotional support for abandoned, homeless, and abused children. Join us in making a difference today." />
+  
+  <meta property="og:title" content="Kindroot Haven | A Safe Home for Every Child" />
+  <meta property="og:description" content="Kindroot Haven provides a safe haven, education, and emotional support for abandoned, homeless, and abused children. Join us in making a difference today." />
+  <meta property="og:image" content="http://127.0.0.1:5501/Images/orphanage.png" />
+  <meta property="og:url" content="http://127.0.0.1:5501/index.html" />
+  <meta property="og:type" content="website" />
 
-        .navbar {
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;   /* All the navigation links are aligned on top at the center */
-            padding: 20px;    /* The items have been placed at a spacing of 20px, this is so that the user has better readbility */
-        }
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Animation Keyframes */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    
+    /* NEW: Class to trigger the animation */
+    .fade-in-on-load {
+      animation: fadeIn 1.5s ease-out 0.1s forwards; /* 1.5s duration, small delay */
+    }
+    
+    /* Ensure the element starts hidden before the JS runs, but apply to the ID */
+    #main-home-image {
+        opacity: 0; 
+    }
 
-        .logo {
-            position: absolute;   /* This position is more relative and not limited*/
-            left: 20px;
-        }
-
-        .nav-links {            /* These are the navigation links placed on top at the navigation bar */
-            list-style: none;
-            display: flex;
-            gap: 40px;
-            margin: 0;
-            padding: 0;
-        }
-
-        .nav-links li a {
-            text-decoration: none;
-            color: #fff;
-            font-size: 18px;
-            transition: color 0.3s;
-        }
-
-        .nav-links li a:hover {
-            color: #b3d1b3;
-        }
-
-        .content {         /* The main content goes here */
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            height: 100vh;
-            padding: 0 20px;
-        }
-
-        .content h1 {     /* The first heading goes here */
-            font-size: 4rem;
-            font-weight: bold;
-            margin-bottom: 20px;    
-            color: #f0f0f0;
-        }
-
-        .content p {        /* The main paragraph goes here */
-            font-size: 1.2rem;
-            line-height: 1.6;
-            max-width: 600px;
-            margin-bottom: 40px;
-        }
-
-        .btn {                /* This is the button takes you to the next page */
-            display: inline-block;
-            padding: 15px 40px;
-            text-decoration: none;
-            color: #fff;
-            background-color: #557b55;
-            border-radius: 5px;
-            font-weight: bold;
-            transition: background-color 0.3s;
-        }
-
-        .btn:hover {
-            background-color: #436443;    /* This is the button's background colour */
-        }
-
-        hr {
-            display: none;
-        }
-    </style>
+    /* Button and layout styles matching Partners page */
+    .button-group {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 2rem;
+      flex-wrap: wrap;
+    }
+    .nav-button {
+      background-color: #4caf50;
+      color: white;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+    .nav-button:hover {
+      background-color: #388e3c;
+    }
+    @media (max-width: 600px) {
+      .button-group {
+        flex-direction: column;
+      }
+      .nav-links {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
 </head>
+
 <body>
-    <header>
-        <!--This is the very top where the navigation bar is located-->
-        <nav class="navbar">
-            <!--The navigation bar is put into a specific class-->
-            <a href="index.html" class="logo">
-                <!--This is the link for the logo-->
-                <img src="Images/logo.png" width="48" height="48" alt="Kindroot Haven Logo"/>
-                <!--This is the logo image which I have decreased its size so it can be appropriate for logo sizes. It is placed at the top left corner of the web page.-->
-            </a>
-            <ul class="nav-links">
-                <!--Below are the navigation links that are placed on the navigation bar on top-->
-                <li><a href="index.html">Home</a></li> target="blank"
-                <li><a href="aboutus.html">About Us</a></li> target="blank"
-                <li><a href="contactus.html">Contact Us</a></li> target="blank"
-                <li><a href="partners.html">Partners & Sponsors</a></li> target="blank"
-                <li><a href="testimonials.html">Testimonials</a></li> target="blank"
-                <li><a href="donations.html">Donations</a></li> target="blank"
-            </ul>
-        </nav>
-    </header>
-    <main class="content">
-        <!--The main content goes here -->
-        <h1>Kindroot Haven</h1>
-        <p>
-            Kindroot Haven targets all abandoned children who are homeless, abused and thrown away. 
-            We take them in and support them. Once they're in Kindroot Haven's hands, they are given a 
-            safe environment to grow in, and they have access to education and emotional support.
-        </p>
-        <hr>
-        <p><a href="aboutus.html" class="btn">Next</a></p>
-    </main>
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <a href="index.html">
+          <img src="Images/logo.png" width="48" height="48" alt="Kindroot Haven Logo" />
+        </a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="contactus.html">Contact Us</a></li>
+        <li><a href="partners.html">Partners & Sponsors</a></li>
+        <li><a href="testimonials.html">Testimonials</a></li>
+        <li><a href="donations.html">Donations</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="content">
+    <h1>Kindroot Haven</h1>
+
+    <img id="main-home-image" src="Images/orphanage.png" width="500" height="auto"/>
+
+    <p>
+      Kindroot Haven targets all abandoned children who are homeless, abused, and thrown away. 
+      We take them in and support them. Once they're in Kindroot Haven's hands, they are given a 
+      safe environment to grow in, and they have access to education and emotional support.
+    </p>
+
+    <div class="button-group">
+      <a href="aboutus.html" class="nav-button">Next →</a>
+    </div>
+  </main>
+  
+  <script>
+    const image = document.getElementById('main-home-image');
+    
+    // Function to run the animation
+    function animateImage() {
+        // 1. Reset: Remove the class to ensure it can run again
+        image.classList.remove('fade-in-on-load');
+        // 2. Force reflow/re-render (crucial for re-running CSS animations)
+        void image.offsetWidth; 
+        // 3. Trigger: Add the class back, starting the animation
+        image.classList.add('fade-in-on-load');
+    }
+
+    // Run the animation immediately when the page loads
+    animateImage(); 
+  </script>
 </body>
 </html>

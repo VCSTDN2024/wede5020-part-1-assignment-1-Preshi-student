@@ -1,229 +1,243 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Us</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Our Mission & Vision | Kindroot Haven</title>
 
-  <!-- This is the CSS link that connects all the web pages -->
-  <link rel="stylesheet" href="style.css">
+    <meta name="description" content="Learn about Kindroot Haven's vision to nurture resilient children and our mission to provide a safe, loving environment, education, and emotional support for vulnerable orphans." />
+    
+    <meta property="og:title" content="Kindroot Haven: Our Mission to Support Vulnerable Children" />
+    <meta property="og:description" content="Discover Kindroot Haven's core values, mission, and vision for empowering resilient children through compassion, safety, and education." />
+    <meta property="og:image" content="http://127.0.0.1:5501/Images/mission.png" /> 
+    <meta property="og:url" content="http://127.0.0.1:5501/aboutus.html" />
+    <meta property="og:type" content="article" />
+    
+    <link rel="stylesheet" href="style.css">
 
-  <style>
-    /* These are the base settings */
-    html {
-      font-size: 16px; /* baseline for rem units is placed here */
-    }
-    body, html {
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-      color: #fff;
-      line-height: 1.6;
-      height: 100%;
-      overflow: auto;
-      background-color: #557b55;  
-    }
+    <style>
+        /* These are the base settings */
+        html {
+            font-size: 16px; /* baseline for rem units is placed here */
+        }
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            color: #fff;
+            line-height: 1.6;
+            height: 100%;
+            overflow: auto;
+            background-color: #557b55;
+        }
 
-    /* The navigation bar goes here */
-    .navbar {
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-      padding: 1.25rem 1rem; /* Rem is used for padding here */
-      background-color: transparent;
-    }
-    .logo {           /* The style for the logo goes here */
-      position: absolute;
-      left: 1.25rem;
-    }
-    /* The navigation links go here */
-    .nav-links {         
-      list-style: none;
-      display: flex;
-      gap: 2.5rem;
-      margin: 0;
-      padding: 0;
-    }
-    .nav-links li a {
-      text-decoration: none;
-      color: #fff;
-      font-size: 1.125rem; /* ~18px */
-      transition: color 0.3s;
-    }
-    .nav-links li a:hover {
-      color: #b3d1b3;
-    }
+        /* The navigation bar goes here */
+        .navbar {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding: 1.25rem 1rem; /* Rem is used for padding here */
+            background-color: transparent;
+        }
+        .logo {           /* The style for the logo goes here */
+            position: absolute;
+            left: 1.25rem;
+        }
+        /* The navigation links go here */
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 2.5rem;
+            margin: 0;
+            padding: 0;
+        }
+        .nav-links li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 1.125rem; /* ~18px */
+            transition: color 0.3s;
+        }
+        .nav-links li a:hover {
+            color: #b3d1b3;
+        }
 
-    /* The page content layout comes here */
-    .page-content {
-      padding: 2.5rem 1rem;
-      max-width: 1000px;
-      margin: 0 auto;
-    }
+        /* The page content layout comes here */
+        .page-content {
+            padding: 2.5rem 1rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
 
-    h1, h2, h3 {
-      margin-bottom: 1.25rem;
-      text-align: center;
-      font-size: 2rem;
-    }
+        /* Headings: make them white so they’re visible */
+        h1, h2, h3 {
+            margin-bottom: 1.25rem;
+            text-align: center;
+            font-size: 2rem;
+            color: #ffffff;  /* added this line */
+        }
 
-    .section-container {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 3rem;
-      gap: 2.5rem;
-    }
-    .section-container.reverse {
-      flex-direction: row-reverse;
-    }
-    .text-content {
-      flex: 1;
-      text-align: left;
-      font-size: 1rem;
-    }
-    .image-container {
-      flex-shrink: 0;
-      width: 350px;
-    }
-    .image-container img {
-      display: block;
-      border-radius: 0.5rem;
-      width: 100%;
-      height: auto;
-    }
+        .section-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 3rem;
+            gap: 2.5rem;
+        }
+        .section-container.reverse {
+            flex-direction: row-reverse;
+        }
+        .text-content {
+            flex: 1;
+            text-align: left;
+            font-size: 1rem;
+        }
+        .image-container {
+            flex-shrink: 0;
+            width: 350px;
+        }
+        .image-container img {
+            display: block;
+            border-radius: 0.5rem;
+            width: 100%;
+            height: auto;
+        }
 
-    /* This is the button container for the buttons */
-    .nav-buttons {
-      display: flex;
-      justify-content: space-between;
-      max-width: 1000px;
-      margin: 1.5rem auto;
-      padding: 0 1rem;
-    }
+        /* This is the button container for the buttons */
+        .nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            max-width: 1000px;
+            margin: 1.5rem auto;
+            padding: 0 1rem;
+        }
 
-    .nav-buttons button {
-      background-color: #438a43; /* This is the background colour for the buttons */
-      color: #fff;
-      border: none;
-      padding: 0.75rem 1.5rem;
-      border-radius: 0.5rem;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: background-color 0.3s;
-    }
-    .nav-buttons button:hover {
-      background-color: #356b35;
-    }
+        .nav-buttons button {
+            background-color: #438a43; /* This is the background colour for the buttons */
+            color: #fff;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .nav-buttons button:hover {
+            background-color: #356b35;
+        }
 
-    /* I have made some resposive adjustments here so my web pages are responsive */
-    @media (max-width: 768px) {
-      .section-container,
-      .section-container.reverse {
-        flex-direction: column;
-        text-align: center;
-      }
-      .text-content {
-        text-align: center;
-      }
-      .image-container {
-        width: 100%;
-        max-width: 300px;
-      }
-      .nav-buttons button {
-        width: 45%; /
-        min-width: 120px;
-      }
-    }
+        /* I have made some responsive adjustments here so my web pages are responsive */
+        @media (max-width: 768px) {
+            .section-container,
+            .section-container.reverse {
+                flex-direction: column;
+                text-align: center;
+            }
+            .text-content {
+                text-align: center;
+            }
+            .image-container {
+                width: 100%;
+                max-width: 300px;
+            }
+            .nav-buttons button {
+                width: 45%; /* fixed comment slash */
+                min-width: 120px;
+            }
+        }
 
-    @media (max-width: 480px) {
-      html {
-        font-size: 14px;
-      }
-      h1, h2, h3 {
-        font-size: 1.5rem;
-      }
-      .nav-links {
-        gap: 1rem;
-      }
-      .nav-buttons {
-        flex-direction: column;
-        align-items: center;
-      }
-      .nav-buttons button {
-        width: 90%;
-        font-size: 0.9rem;
-        margin-bottom: 0.5rem;
-      }
-    }
-  </style>
+        @media (max-width: 480px) {
+            html {
+                font-size: 14px;
+            }
+            h1, h2, h3 {
+                font-size: 1.5rem;
+            }
+            .nav-links {
+                gap: 1rem;
+            }
+            .nav-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            .nav-buttons button {
+                width: 90%;
+                font-size: 0.9rem;
+                margin-bottom: 0.5rem;
+            }
+        }
+    </style>
 </head>
 <body>
 
-  <header>
-    <!--This is the header at the very top where the navigation bar is located-->
-    <nav class="navbar">
-      <!--Under the navigation class here the navigation bar is placed-->
-      <a href="index.html" class="logo">
-        <!--This is the logo link-->
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo">
+                <img src="Images/logo.png" width="48" height="48" alt="Kindroot Haven Logo"/>
+                </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+                <li><a href="partners.html">Partners & Sponsors</a></li>
+                <li><a href="testimonials.html">Testimonials</a></li>
+                <li><a href="donations.html">Donations</a></li>
+            </ul>
+        </nav>
+    </header>
 
-        <img src="Images/logo.png" width="48" height="48" alt="Kindroot Haven Logo"/>
-        <!--This is the logoi image which is situated at the top left corner of the web page-->
-      </a>
-      <ul class="nav-links">
-        <!--Here are the navigation links that are situated at the top of the navigation bar-->
-        <li><a href="index.html">Home</a></li>
-        <li><a href="aboutus.html">About Us</a></li>
-        <li><a href="contactus.html">Contact Us</a></li>
-        <li><a href="partners.html">Partners & Sponsors</a></li>
-        <li><a href="testimonials.html">Testimonials</a></li>
-        <li><a href="donations.html">Donations</a></li>
-      </ul>
-    </nav>
-  </header>
+    <main class="page-content">
+        <h1>About Us</h1>
 
-  <main class="page-content">
-    <!--The main content goes here-->
-    <h1>About Us</h1>
+        <div class="section-container">
+            <div class="image-container">
+                <img src="Images/compassion.png" alt="Compassion">
+            </div>
+            <div class="text-content">
+                <p>No child deserves to suffer. Every child deserves a safe environment to be seen, heard, and cared for.</p>
+            </div>
+        </div>
 
-    <div class="section-container">
-      <div class="image-container">
-        <img src="Images/compassion.png" alt="Compassion">
-      </div>
-      <div class="text-content">
-        <p>No child deserves to suffer. Every child deserves a safe environment to be seen, heard, and cared for.</p>
-      </div>
-    </div>
+        <h2>Vision</h2>
+        <div class="section-container reverse">
+            <div class="text-content">
+                <p>
+                    Our vision as Kindroot Haven is to nurture resilient, and compassionate children to grow into empowered adults that then get ready 
+                    to shape their communities with kindness, courage, and purpose.
+                </p>
+            </div>
+            <div class="image-container">
+                <img src="Images/vision.png" alt="Vision">
+            </div>
+        </div>
 
-    <h2>Vision</h2>
-    <div class="section-container reverse">
-      <div class="text-content">
-        <!--Here is the container for the text -->
+        <h3>Mission</h3>
         <p>
-          Our vision as Kindroot Haven is to nurture resilient, and compassionate children to grow into empowered adults that then get ready 
-          to shape their communities with kindness, courage, and purpose. 
+            Our mission is to provide a safe, nurtured environment where orphans and vulnerable children will receive special childhood care,
+            emotional support and even have access to education. This will empower children to heal, grow, and even thrive with a loving
+            community.
         </p>
-      </div>
-      <div class="image-container">
-        <!--Here is the container for the image-->
-        <img src="Images/vision.png" alt="Vision">
-      </div>
-    </div>
+        <div class="image-container">
+            <img src="Images/mission.png" alt="Kindroot Haven Mission">    
+        </div>
 
-    <h3>Mission</h3>
-    <p>
-      Our mission is to provide a safe, nurtured environment where orphans and vulnerable children will receive special childhood care,
-      emotional support and even have access to education. This will empower children to heal, grow, and even thrive with a loving
-      community. 
-    </p>
+        <div class="nav-button">
+            <div class="nav-buttons">
+                <button onclick="window.location.href='index.html'">← Back to Home</button>
+                <button onclick="window.location.href='contactus.html'">Next → Contact Us</button>
+            </div>
+        </div>
 
-    <div class="nav-buttons">
-      <!--Here is the container for the back and next buttons -->
-      <button onclick="window.location.href='index.html'">← Back to Home</button>
-      <button onclick="window.location.href='contactus.html'">Next → Contact Us</button>
-    </div>
+    </main>
 
-  </main>
+    <script>
+        const footerHTML = `
+            <footer class="site-footer">
+                <p>&copy; 2025 Kindroot Haven. All Rights Reserved.</p>
+            </footer>
+        `;
+        document.body.insertAdjacentHTML('beforeend', footerHTML);
+    </script>
 
 </body>
 </html>

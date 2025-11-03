@@ -1,189 +1,225 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Donations</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
 
-  <!-- This is the CSS link needed to link all the pages -->
+  <!-- Page-specific SEO  -->
+  <title>Donations — Kindroot Haven</title>
+  <meta name="description" content=" Support Kindroot Haven by donating to provide meals, school supplies, shelter and healthcare for children in need.">
+  <meta name="keywords" content="Kindroot Haven, donations, charity, children, nonprofit">
+  <link rel="canonical" href="http://127.0.0.1:5501/donations.html">
+
+  <!-- Open Graph / social -->
+  <meta property="og:site_name" content="Kindroot Haven">
+  <meta property="og:title" content="Donations — Kindroot Haven">
+  <meta property="og:description" content="Kindroot Haven targets all abandoned children who are homeless, abused, and thrown away. 
+      We take them in and support them.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="http://127.0.0.1:5501/Images/logo.png">
+  <meta property="og:url content=">
+  
+
+  <!-- Structured data (Organization / NGO) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "NGO",
+    "name": "Kindroot Haven",
+    "url": "http://127.0.0.1:5501/donations.html",
+    "logo": "http://127.0.0.1:5501/Images/logo.png",
+    "sameAs": [
+      "https://www.facebook.com/profile.php?id=61563905681208",
+      "https://www.instagram.com/kindroothaven/",
+    ],
+    "contactPoint": [{
+      "@type": "ContactPoint",
+      "telephone": "+27-REPLACE_NUMBER",
+      "contactType": "customer service",
+      "areaServed": "ZA"
+    }]
+  }
+  </script>
+
   <link rel="stylesheet" href="style.css">
-
   <style>
-    body {
-      background: #f8f5f0; /* The soft golden-brown background colour is used here  */
-      font-family: Arial, sans-serif;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: center;
-      min-height: 100vh;
-      margin: 0;
-      padding: 20px;
-    }
+    :root { --brand: #438a43; --brand-dark: #356b35; --muted: #777; --bg:#f8f5f0; }
+    body { background: var(--bg); font-family: Arial, sans-serif; margin:0; padding:20px; display:flex; flex-direction:column; align-items:center; min-height:100vh; }
+    .container { width:100%; max-width:900px; }
+    .site-header, .site-footer { display:flex; justify-content:space-between; align-items:center; gap:12px; padding:12px 0; }
+    .nav a { margin-left:12px; color:var(--brand); text-decoration:none; }
+    h1,h2 { color:#5a3e1b; margin:0 0 8px; }
+    p.lead { color:var(--muted); margin-top:6px; }
 
-    form {     /* The form design is displayed here */
-      background: #fff;
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      max-width: 500px;
-      width: 100%;
-    }
-    /* The design for the first heading goes here */
-    h1 {
-      text-align: center;
-      color: #5a3e1b;
-      margin-bottom: 10px;
-    }
-     /* The design for the main paragraph goes here */
-    p {
-      text-align: center;    /* The text is aligned towards the center here */
-      color: #333;
-      margin-bottom: 20px;     /* A space of 20px at the margin bottom is placed here for better readability */
-    }
+    /* Donation form styling */
+    .card { background:#fff; padding:28px; border-radius:12px; box-shadow:0 6px 20px rgba(0,0,0,0.06); margin-top:18px; }
+    .form-row { margin-bottom:14px; }
+    label { display:block; font-weight:600; margin-bottom:6px; color:#333; }
+    input[type="text"], textarea, select { width:100%; padding:10px; border:1px solid #d6d6d6; border-radius:8px; font-size:14px; box-sizing:border-box; }
+    textarea { resize:vertical; min-height:80px; }
+    .donate-button { width:100%; background:var(--brand); color:#fff; padding:12px; font-size:16px; border:none; border-radius:8px; cursor:pointer; transition:background .2s; }
+    .donate-button:hover { background:var(--brand-dark); }
 
-    label {
-      display: block;
-      margin-top: 10px;
-      margin-bottom: 4px;
-      font-weight: bold;
-      color: #333;
-    }
+    .note { color:var(--muted); font-size:13px; margin-top:12px; }
 
-    input[type="text"], textarea, select {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 15px;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      font-size: 14px;
-      box-sizing: border-box;
+    /* Toast */
+    #toast {
+      visibility: hidden; min-width: 260px; max-width: 90%;
+      margin-left: -130px; background: var(--brand); color: #fff;
+      text-align: center; border-radius: 10px; padding: 14px 20px;
+      position: fixed; left: 50%; bottom: 30px; font-size: 15px; z-index: 1200;
+      opacity: 0; transform: translateY(12px); transition: opacity .35s, transform .35s; box-shadow: 0 6px 18px rgba(0,0,0,.12);
     }
+    #toast.show { opacity: 1; visibility: visible; transform: translateY(0); }
 
-    textarea {
-      resize: vertical;
-    }
-
-    .radio-group {
-      margin-bottom: 15px;
-    }
-
-    .radio-group input[type="radio"] {
-      margin-right: 5px;
-    }
-
-    .donate-button {
-      width: 100%;
-      background: #c99748;
-      color: #fff;
-      padding: 12px;
-      font-size: 16px;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-
-    .donate-button:hover {
-      background: #a67833;
-    }
-
-    .footer-text {
-      text-align: center;
-      margin-top: 20px;
-      font-size: 14px;
-      color: #555;
-    }
-
-    .nav-buttons {
-      display: flex;
-      justify-content: space-between;
-      max-width: 500px;
-      width: 100%;
-      margin-top: 20px;
-      padding: 0 20px;
-    }
-
-    .nav-buttons button {
-      background-color: #438a43; /* background colour of the buttons */
-      color: #fff;
-      border: none;
-      padding: 12px 28px;
-      font-size: 16px;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: background-color 0.3s, transform 0.1s;
-     
-      type: button;
-    }
-
-    .nav-buttons button:hover {
-      background-color: #356b35;
-    }
-
-    .nav-buttons button:active {
-      transform: scale(0.98);
-    }
-
-    @media (max-width: 768px) {
-      .nav-buttons {
-        flex-direction: column;
-        align-items: center;
-      }
-      .nav-buttons button {
-        width: 90%;
-        margin-bottom: 10px;
-      }
+    /* Responsive */
+    @media (max-width:640px){
+      .site-header { flex-direction:column; align-items:flex-start; }
+      .nav a { margin-left:6px; display:inline-block; margin-top:6px; }
     }
   </style>
 </head>
 <body>
-   <!--The form is displayed here-->
-  <form action="https://www.paypal.com/donate" method="post" target="_blank">   <!--The option to donate via paypal is displayed here-->
-    <h1>Donations</h1>
-    <p>Make a meaningful contribution to support our cause.</p>
+  <div class="container">
+    <!-- Header -->
+    <header class="site-header" role="banner" aria-label="Site header">
+      <a href="index.html" aria-label="Kindroot Haven home">
+        <img src="Images/logo.png" alt="Kindroot Haven logo" style="height:48px;">
+      </a>
+      <nav class="nav" role="navigation" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="partners.html">Partners</a>
+        <a href="donations.html" aria-current="page">Donations</a>
+        <a href="testimonials.html">Testimonials</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
 
-    <input type="hidden" name="business" value="your-paypal-email@example.com">
-    <input type="hidden" name="currency_code" value="ZAR">
+    <!-- Hero -->
+    <section class="hero">
+      <h1>Donations</h1>
+      <p class="lead">Help us make a meaningful difference — fund meals, supplies, shelter and healthcare for children in need.</p>
+    </section>
 
-    <legend>Choose donation type</legend>
-    <div class="radio-group">
-      <input type="radio" id="once" name="donation_type" value="One-time" checked>
-      <label for="once">One-time</label>
+    <!-- Donation card -->
+    <section class="card" aria-labelledby="donation-heading">
+      <h2 id="donation-heading">Make a Donation</h2>
+      <p class="note">Your donation will open the payment page in a new tab. Use the test flow while developing.</p>
 
-      <input type="radio" id="monthly" name="donation_type" value="Monthly">
-      <label for="monthly">Monthly</label>
+      <!-- NOTE: action is set to a test page for local testing. Replace action & business when you go live. -->
+      <form id="donationForm" action="thankyou.html" method="post" target="_blank" novalidate>
+        <!-- Replace with your real PayPal business email when ready -->
+        <input type="hidden" name="business" value="REPLACE_PAYPAL_EMAIL">
+        <input type="hidden" name="currency_code" value="ZAR">
 
-      <input type="radio" id="quarterly" name="donation_type" value="Quarterly">
-      <label for="quarterly">Quarterly</label>
-    </div>
+        <fieldset style="border:none;padding:0;margin:0;">
+          <legend class="sr-only">Donation options</legend>
 
-    <label for="donorName">Name:</label>
-    <input type="text" id="donorName" name="custom" placeholder="Your full name">
+          <div class="form-row">
+            <label>Donation Type</label>
+            <label><input type="radio" name="donation_type" value="One-time" checked> One-time</label>
+            <label style="margin-left:12px;"><input type="radio" name="donation_type" value="Monthly"> Monthly</label>
+            <label style="margin-left:12px;"><input type="radio" name="donation_type" value="Quarterly"> Quarterly</label>
+          </div>
 
-    <label for="message">Message:</label>
-    <textarea id="message" name="item_name" rows="4" placeholder="Optional note..."></textarea>
+          <div class="form-row">
+            <label for="donorName">Name <span aria-hidden="true">*</span></label>
+            <input id="donorName" name="custom" type="text" placeholder="Your full name" aria-required="true">
+          </div>
 
-    <label for="purpose">Choose a purpose:</label>
-    <select id="purpose" name="item_number">
-        <!--Different options of which kind of purpose the user can choose on a way to help out-->
-      <option value="meals">Meals for children</option>
-      <option value="school">School supplies</option>
-      <option value="shelter">Shelter &amp; care</option>
-      <option value="health">Healthcare support</option>
-      <option value="activities">After-school activities</option>
-      <option value="general">General support</option>
-    </select>
-    <!--The button where the user can donate is found here-->
-    <button type="submit" class="donate-button">Donate Now</button>
-    <!--Here is the text found at the footer-->
-    <p class="footer-text">Kindroot Haven is a non-profit organisation that provides support to children in need.</p>
-  </form>
+          <div class="form-row">
+            <label for="message">Message</label>
+            <textarea id="message" name="item_name" placeholder="Optional note..."></textarea>
+          </div>
 
-  <div class="nav-buttons">
-    <button type="button" onclick="window.location.href='partners.html'">← Back to Partners</button>
-    <button type="button" onclick="window.location.href='testimonials.html'">Next → Testimonials</button>
+          <div class="form-row">
+            <label for="purpose">Choose a purpose <span aria-hidden="true">*</span></label>
+            <select id="purpose" name="item_number" aria-required="true">
+              <option value="">--Select purpose--</option>
+              <option value="meals">Meals for children</option>
+              <option value="school">School supplies</option>
+              <option value="shelter">Shelter & care</option>
+              <option value="health">Healthcare support</option>
+              <option value="activities">After-school activities</option>
+              <option value="general">General support</option>
+            </select>
+          </div>
+
+          <div class="form-row" style="margin-top:12px;">
+            <button type="submit" class="donate-button">Donate Now</button>
+          </div>
+        </fieldset>
+
+        <p class="note" style="margin-top:8px;">If you have issues with the donation process, contact us at <a href="mailto:REPLACE_CONTACT_EMAIL">REPLACE_CONTACT_EMAIL</a>.</p>
+      </form>
+    </section>
+
+    <!-- Optional embed: YouTube video about your mission (replace ID) -->
+    <section style="margin-top:20px;">
+      <h3>About Our Work</h3>
+      <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:8px;box-shadow:0 6px 18px rgba(0,0,0,0.06); margin-top:10px;">
+        <iframe src="https://www.youtube.com/watch?v=XozrqJHA-yI&pp=ygUdZG9uYXRlIHRvIHNhdmUgYSBjaGlsZCdzIGxpZmU%3D" title="Kindroot Haven video" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer" style="margin-top:28px; padding-top:18px; border-top:1px solid #eee; color:var(--muted); text-align:center;">
+      <p style="margin:6px 0;">&copy; <span id="year"></span> Kindroot Haven. All Rights Reserved.</p>
+      <p style="font-size:13px; margin:4px 0;">Registered non-profit. <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a></p>
+    </footer>
   </div>
 
+  <!-- Toast (global) -->
+  <div id="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+
+  <!-- Scripts: validation, toast, small animations -->
+  <script>
+    // small page init
+    document.addEventListener('DOMContentLoaded', () => {
+      document.getElementById('year').textContent = new Date().getFullYear();
+    });
+
+    // toast helper
+    function showToast(msg = "Done", duration = 3000) {
+      const t = document.getElementById('toast');
+      t.textContent = msg;
+      t.classList.add('show');
+      t.setAttribute('aria-hidden', 'false');
+      setTimeout(() => {
+        t.classList.remove('show');
+        t.setAttribute('aria-hidden', 'true');
+      }, duration);
+    }
+
+    // Donation form validation + post-submission toast
+    (function(){
+      const form = document.getElementById('donationForm');
+      if(!form) return;
+
+      form.addEventListener('submit', function(e){
+        // client-side validation
+        const name = document.getElementById('donorName')?.value?.trim();
+        const purpose = document.getElementById('purpose')?.value;
+
+        if(!name) {
+          e.preventDefault();
+          showToast("Please enter your name.", 2800);
+          document.getElementById('donorName').focus();
+          return;
+        }
+        if(!purpose) {
+          e.preventDefault();
+          showToast("Please select a donation purpose.", 2800);
+          document.getElementById('purpose').focus();
+          return;
+        }
+
+        // valid: show thank you toast while allowing natural submit to continue.
+        // Note: form opens in new tab because of target="_blank"
+        showToast("Thank you — redirecting to payment...", 3000);
+        // no e.preventDefault() here so the browser will open the payment page in a new tab
+      });
+    })();
+  </script>
 </body>
 </html>
