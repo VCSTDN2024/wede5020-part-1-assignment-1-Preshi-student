@@ -13,12 +13,10 @@
   <!-- Open Graph / social -->
   <meta property="og:site_name" content="Kindroot Haven">
   <meta property="og:title" content="Donations — Kindroot Haven">
-  <meta property="og:description" content="Kindroot Haven targets all abandoned children who are homeless, abused, and thrown away. 
-      We take them in and support them.">
+  <meta property="og:description" content="Kindroot Haven targets all abandoned children who are homeless, abused, and thrown away. We take them in and support them.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="http://127.0.0.1:5501/Images/logo.png">
   <meta property="og:url content=">
-  
 
   <!-- Structured data (Organization / NGO) -->
   <script type="application/ld+json">
@@ -30,7 +28,7 @@
     "logo": "http://127.0.0.1:5501/Images/logo.png",
     "sameAs": [
       "https://www.facebook.com/profile.php?id=61563905681208",
-      "https://www.instagram.com/kindroothaven/",
+      "https://www.instagram.com/kindroothaven/"
     ],
     "contactPoint": [{
       "@type": "ContactPoint",
@@ -106,9 +104,7 @@
       <h2 id="donation-heading">Make a Donation</h2>
       <p class="note">Your donation will open the payment page in a new tab. Use the test flow while developing.</p>
 
-      <!-- NOTE: action is set to a test page for local testing. Replace action & business when you go live. -->
       <form id="donationForm" action="thankyou.html" method="post" target="_blank" novalidate>
-        <!-- Replace with your real PayPal business email when ready -->
         <input type="hidden" name="business" value="REPLACE_PAYPAL_EMAIL">
         <input type="hidden" name="currency_code" value="ZAR">
 
@@ -150,15 +146,36 @@
           </div>
         </fieldset>
 
-        <p class="note" style="margin-top:8px;">If you have issues with the donation process, contact us at <a href="mailto:REPLACE_CONTACT_EMAIL">REPLACE_CONTACT_EMAIL</a>.</p>
+        <p class="note" style="margin-top:8px;">If you have issues with the donation process, contact us at <a href="successpreshi@gmail.com"></a>.</p>
       </form>
     </section>
 
-    <!-- Optional embed: YouTube video about your mission (replace ID) -->
-    <section style="margin-top:20px;">
+    <!-- Video section: About Our Work -->
+    <section style="margin-top: 20px;">
       <h3>About Our Work</h3>
-      <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:8px;box-shadow:0 6px 18px rgba(0,0,0,0.06); margin-top:10px;">
-        <iframe src="https://www.youtube.com/watch?v=XozrqJHA-yI&pp=ygUdZG9uYXRlIHRvIHNhdmUgYSBjaGlsZCdzIGxpZmU%3D" title="Kindroot Haven video" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+      <div style="
+        position: relative;
+        padding-bottom: 56.25%;
+        height: 0;
+        overflow: hidden;
+        border-radius: 8px;
+        box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+        margin-top: 10px;
+      ">
+        <iframe 
+          src="https://www.youtube.com/embed/XozrqJHA-yI"
+          title="Kindroot Haven video"
+          style="
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            border: 0;
+          "
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          loading="lazy">
+        </iframe>
       </div>
     </section>
 
@@ -174,12 +191,10 @@
 
   <!-- Scripts: validation, toast, small animations -->
   <script>
-    // small page init
     document.addEventListener('DOMContentLoaded', () => {
       document.getElementById('year').textContent = new Date().getFullYear();
     });
 
-    // toast helper
     function showToast(msg = "Done", duration = 3000) {
       const t = document.getElementById('toast');
       t.textContent = msg;
@@ -191,13 +206,11 @@
       }, duration);
     }
 
-    // Donation form validation + post-submission toast
     (function(){
       const form = document.getElementById('donationForm');
-      if(!form) return;
+      if (!form) return;
 
       form.addEventListener('submit', function(e){
-        // client-side validation
         const name = document.getElementById('donorName')?.value?.trim();
         const purpose = document.getElementById('purpose')?.value;
 
@@ -214,10 +227,7 @@
           return;
         }
 
-        // valid: show thank you toast while allowing natural submit to continue.
-        // Note: form opens in new tab because of target="_blank"
         showToast("Thank you — redirecting to payment...", 3000);
-        // no e.preventDefault() here so the browser will open the payment page in a new tab
       });
     })();
   </script>

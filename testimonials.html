@@ -13,7 +13,6 @@
   <meta property="og:url" content="testimonials.html" />
   <meta property="og:type" content="website" />
 
-  <!-- Link to external stylesheet -->
   <link rel="stylesheet" href="style.css">
 
   <style>
@@ -81,6 +80,7 @@
       font-size: 2.8rem;
       margin-bottom: 40px;
       animation: fadeInDown 1s ease;
+      color: white; /* 👈 This line makes the heading white */
     }
 
     .testimonial-grid {
@@ -96,7 +96,19 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      animation: fadeInUp 1s ease;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.6s ease, transform 0.6s ease, box-shadow 0.3s ease;
+    }
+
+    .testimonial-card.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .testimonial-card:hover {
+      transform: translateY(-5px) scale(1.02);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
     }
 
     .testimonial-card img {
@@ -160,23 +172,26 @@
       body, html {
         padding: 20px 10px;
       }
+
       .testimonial-card img {
         width: 120px;
         height: 120px;
         margin-bottom: 15px;
       }
+
       .testimonial-card .name {
         font-size: 1.2rem;
       }
+
       .testimonial-card .message {
         font-size: 1rem;
       }
+
       .testimonial-grid {
         gap: 20px;
       }
     }
 
-    /* Simple fade-in animations */
     @keyframes fadeInUp {
       from {
         opacity: 0;
@@ -196,6 +211,13 @@
       to {
         opacity: 1;
         transform: translateY(0);
+      }
+    }
+
+    @media (prefers-reduced-motion) {
+      .testimonial-card {
+        transition: none;
+        transform: none;
       }
     }
   </style>
@@ -222,14 +244,14 @@
 
   <section class="testimonials-section">
     <h1>What people say</h1>
-
     <div class="testimonial-grid">
       <div class="testimonial-card">
         <img src="Images/girltesti.jpg" alt="Jessica">
         <div class="name">Jessica</div>
         <div class="subtitle">Parent</div>
         <div class="message">
-          Being a support to Kindroot Haven has been a rewarding experience. Just my small contribution helps to bring comfort and hope to children.
+          Being a support to Kindroot Haven has been a rewarding experience. Just my
+          small contribution helps to bring comfort and hope to children.
         </div>
       </div>
 
@@ -260,5 +282,24 @@
   <footer class="site-footer">
     <p>&copy; 2025 Kindroot Haven. All Rights Reserved.</p>
   </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const cards = document.querySelectorAll('.testimonial-card');
+      const options = {
+        root: null,
+        threshold: 0.3
+      };
+      const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            obs.unobserve(entry.target);
+          }
+        });
+      }, options);
+      cards.forEach(card => observer.observe(card));
+    });
+  </script>
 </body>
 </html>
