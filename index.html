@@ -15,13 +15,13 @@
 
   <link rel="stylesheet" href="style.css" />
   <style>
-    /* Animation Keyframes */
+    /* Animation Keyframes are found here */
     @keyframes fadeIn {
       from { opacity: 0; }
       to { opacity: 1; }
     }
     
-    /* NEW: Class to trigger the animation */
+    /* Class to trigger the animation */
     .fade-in-on-load {
       animation: fadeIn 1.5s ease-out 0.1s forwards; /* 1.5s duration, small delay */
     }
@@ -31,7 +31,7 @@
         opacity: 0; 
     }
 
-    /* Button and layout styles matching Partners page */
+    /* Button and layout styles matches Partners page */
     .button-group {
       display: flex;
       justify-content: center;
@@ -68,12 +68,14 @@
 <body>
   <header>
     <nav class="navbar">
-      <div class="logo">
+      <div class="logo">  <!--The logo is situated here at the left corner -->
         <a href="index.html">
+          <!--The home page is first recorded here-->
           <img src="Images/logo.png" width="48" height="48" alt="Kindroot Haven Logo" />
         </a>
       </div>
       <ul class="nav-links">
+        <!--The navigation links that appear on the nav bar are found here-->
         <li><a href="index.html">Home</a></li>
         <li><a href="aboutus.html">About Us</a></li>
         <li><a href="contactus.html">Contact Us</a></li>
@@ -88,6 +90,7 @@
     <h1>Kindroot Haven</h1>
 
     <img id="main-home-image" src="Images/orphanage.png" width="500" height="auto"/>
+    <!--The main image goes here-->
 
     <p>
       Kindroot Haven targets all abandoned children who are homeless, abused, and thrown away. 
@@ -95,8 +98,9 @@
       safe environment to grow in, and they have access to education and emotional support.
     </p>
 
-    <div class="button-group">
+    <div class="button-group">   
       <a href="aboutus.html" class="nav-button">Next →</a>
+      <!--The button that leads to the next page is found here-->
     </div>
   </main>
   
@@ -105,11 +109,11 @@
     
     // Function to run the animation
     function animateImage() {
-        // 1. Reset: Remove the class to ensure it can run again
+        // Remove the class to ensure it can run again
         image.classList.remove('fade-in-on-load');
-        // 2. Force reflow/re-render (crucial for re-running CSS animations)
+        //  Force reflow/re-render (crucial for re-running CSS animations)
         void image.offsetWidth; 
-        // 3. Trigger: Add the class back, starting the animation
+        //  Add the class back, starting the animation
         image.classList.add('fade-in-on-load');
     }
 

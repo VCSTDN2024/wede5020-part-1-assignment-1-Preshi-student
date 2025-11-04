@@ -10,8 +10,8 @@
     
     <meta property="og:title" content="Get in Touch with Kindroot Haven" />
     <meta property="og:description" content="Reach the Kindroot Haven team for donations, volunteering, or inquiries. Find our address and contact information here." />
-    <meta property="og:image" content="[FULL_URL_TO_YOUR_LOGO/logo.png]" /> 
-    <meta property="og:url" content="[FULL_URL_TO_YOUR_CONTACT_US_PAGE]" />
+    <meta property="og:image" content="http://127.0.0.1:5501/Images/logo.png" /> 
+    <meta property="og:url" content="http://127.0.0.1:5501/contactus.html" />
     <meta property="og:type" content="website" />
 
     <link rel="stylesheet" href="style.css">
@@ -51,11 +51,13 @@
             padding: 0;
         }
         .nav-links li a {
-            text-decoration: none;
-            color: #fff;         /* changed to white */
-            font-size: 18px;
-            transition: color 0.3s;
-        }
+         text-decoration: none;
+         color: #fff; /* changed to white */
+         font-size: 18px;
+         transition: color 0.3s;
+         }
+
+        
         .nav-links li a:hover {
             color: #557b55;
         }
@@ -211,18 +213,21 @@
             opacity: 1;
             transform: translateY(0);
         }
-        /* ==== End Toast styles ==== */
+        /* ==== End of Toast styles ==== */
 
     </style>
 </head>
 <body>
 
     <header>
+        <!--Here is the navigation bar-->
         <nav class="navbar">
             <a href="index.html" class="logo">
+                <!--The logo is found here-->
                 <img src="Images/logo.png" width="48" height="48" alt="Kindroot Haven Logo"/>
             </a>
             <ul class="nav-links">
+                <!--Here are the navigation links found on the navigation bar-->
                 <li><a href="index.html">Home</a></li>
                 <li><a href="aboutus.html">About Us</a></li>
                 <li><a href="contactus.html">Contact Us</a></li>
@@ -241,6 +246,7 @@
             <div class="form-section">
                 <h2>Name</h2>
                 <form id="contact-form">
+                    <!--Here is the contacts form-->
                     <input type="text" id="name" name="name" placeholder="Name">
                     <h2>Email</h2>
                     <input type="email" id="email" name="email" placeholder="Email">
@@ -258,15 +264,8 @@
             </div>
         </div>
 
-        <iframe
-            src="[PASTE YOUR GOOGLE MAPS EMBED URL HERE]"
-            width="600"
-            height="400"
-            style="border:0;"
-            allowfullscreen=""
-            loading="lazy">
-        </iframe>
-    </main>
+        
+
 
     <div class="nav-buttons">
         <button onclick="window.location.href='aboutus.html'">← Back to About Us</button>
@@ -275,58 +274,57 @@
 
     <div id="toast-container"></div>
 
-    <script>
-        const footerHTML = `
-            <footer class="site-footer">
-                <p>© 2025 Kindroot Haven. All Rights Reserved.</p>
-            </footer>
-        `;
-        document.body.insertAdjacentHTML('beforeend', footerHTML);
-
-        document.addEventListener('DOMContentLoaded', function() {
-            const form = document.getElementById('contact-form');
-            const toastContainer = document.getElementById('toast-container');
-
-            function showToast(message, duration = 3000) {
-                const toast = document.createElement('div');
-                toast.className = 'toast';
-                toast.innerText = message;
-                toastContainer.appendChild(toast);
-
-                // trigger show animation
-                setTimeout(() => {
-                    toast.classList.add('show');
-                }, 10);
-
-                // remove after duration
-                setTimeout(() => {
-                    toast.classList.remove('show');
-                    // wait for animation then remove
-                    setTimeout(() => {
-                        toastContainer.removeChild(toast);
-                    }, 300);
-                }, duration);
-            }
-
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d114763.85011542277!2d28.011704192355328!3d-25.988684010965855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e9571fd4965198b%3A0x87b2105c1c8bfe22!2sMidrand!5e0!3m2!1sen!2sza!4v1762198042760!5m2!1sen!2sza"
-            width="600" 
-            height="450" 
-            style="border:0;" 
-            allowfullscreen="" 
-            loading="lazy" 
-            referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
-
-
-            form.addEventListener('submit', function(event) {
-                event.preventDefault(); // prevent page refresh
-                // You could add validation or send form data here
-                showToast('Thank you for your message!');
-                form.reset(); // clear form fields
-            });
-        });
-    </script>
-
     
+  <!-- Embedded Google Map -->
+  <div class="map-container">
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d114763.85011542277!2d28.011704192355328!3d-25.988684010965855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e9571fd4965198b%3A0x87b2105c1c8bfe22!2sMidrand!5e0!3m2!1sen!2sza!4v1762198042760!5m2!1sen!2sza" 
+      width="600" 
+      height="450" 
+      style="border:0;" 
+      allowfullscreen="" 
+      loading="lazy" 
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+</section>
+
+<!-- Footer will be injected by JavaScript -->
+  <script>
+    const footerHTML = `
+      <footer class="site-footer">
+        <p>© 2025 Kindroot Haven. All Rights Reserved.</p>
+      </footer>
+    `;
+    document.body.insertAdjacentHTML('beforeend', footerHTML);
+
+    document.addEventListener('DOMContentLoaded', function () {
+      const form = document.getElementById('contact-form');
+      const toastContainer = document.getElementById('toast-container');
+
+      function showToast(message, duration = 3000) {
+        const toast = document.createElement('div');
+        toast.className = 'toast';
+        toast.innerText = message;
+        toastContainer.appendChild(toast);
+
+        setTimeout(() => {
+          toast.classList.add('show');
+        }, 10);
+        setTimeout(() => {
+          toast.classList.remove('show');
+          setTimeout(() => {
+            toast.remove();
+          }, 300);
+        }, duration);
+      }
+
+      form.addEventListener('submit', function (event) {
+        event.preventDefault();
+        showToast('Thank you for your message!');
+        form.reset();
+      });
+    });
+  </script>
 </body>
 </html>
